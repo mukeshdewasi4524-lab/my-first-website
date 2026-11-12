@@ -1,3 +1,3 @@
 function showMessage() {
-    alert("Congratulations! Your website is working!");
+    alert("Welcome to your coding journey!🍼");
 }
