@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mukesh Dewasi - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Manrope:wght@600;700;800&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a1120;
+            --accent: #d7ff32;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f1f5f9;
+            color: var(--text-dark);
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        .resume-page {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 48px 52px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .top-accent-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #d7ff32, #22c55e);
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .resume-header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+
+        .resume-header h1 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        .resume-header .role-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #2563eb;
+            margin-top: 4px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .contact-links a {
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px dotted #94a3b8;
+        }
+
+        .contact-links a:hover {
+            color: #2563eb;
+            border-bottom-color: #2563eb;
+        }
+
+        .resume-section {
+            margin-bottom: 22px;
+        }
+
+        .section-heading {
+            font-family: 'Manrope', sans-serif;
+            font-size: 13.5px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            padding-bottom: 4px;
+            border-bottom: 1.5px solid var(--border);
+        }
+
+        .section-heading::before {
+            content: '';
+            width: 4px;
+            height: 14px;
+            background: #d7ff32;
+            border-radius: 2px;
+            box-shadow: 0 0 6px rgba(215, 255, 50, 0.6);
+        }
+
+        .item-group {
+            margin-bottom: 14px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 2px;
+        }
+
+        .item-title {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .item-subtitle {
+            font-size: 12.5px;
+            font-style: italic;
+            color: #64748b;
+        }
+
+        .tech-inline {
+            font-size: 12px;
+            font-weight: 600;
+            color: #3b82f6;
+            margin-bottom: 4px;
+        }
+
+        ul.bullet-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 4px;
+        }
+
+        ul.bullet-list li {
+            position: relative;
+            padding-left: 16px;
+            font-size: 12.5px;
+            line-height: 1.55;
+            color: #334155;
+            margin-bottom: 3px;
+        }
+
+        ul.bullet-list li::before {
+            content: '•';
+            position: absolute;
+            left: 4px;
+            color: #64748b;
+            font-weight: bold;
+        }
+
+        .skills-table {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 8px 14px;
+            font-size: 12.5px;
+        }
+
+        .skills-table .skill-cat {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .skills-table .skill-items {
+            color: #334155;
+        }
+
+        .no-print-toolbar {
+            max-width: 820px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-print {
+            background: #0a1120;
+            color: #ffffff;
+            border: 1px solid #1e293b;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 13.5px;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-print:hover {
+            background: #d7ff32;
+            color: #0a1120;
+        }
+
+        .back-link {
+            color: #475569;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13.5px;
+        }
+
+        .back-link:hover {
+            color: #0f172a;
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+            }
+            .no-print-toolbar {
+                display: none !important;
+            }
+            .resume-page {
+                box-shadow: none;
+                border: none;
+                padding: 24px 30px;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print-toolbar">
+        <a href="index.html" class="back-link">← Return to Portfolio</a>
+        <button onclick="window.print()" class="btn-print">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            Print / Save as PDF
+        </button>
+    </div>
+
+    <main class="resume-page">
+        <div class="top-accent-bar"></div>
+
+        <header class="resume-header">
+            <h1>Mukesh Dewasi</h1>
+            <div class="role-title">Student Developer | First-Year College Student</div>
+            <div class="contact-links">
+                <span>Location: India</span>
+                <span>GitHub: <a href="https://github.com/mukeshdewasi4524-lab" target="_blank" rel="noopener noreferrer">github.com/mukeshdewasi4524-lab</a></span>
+                <span>LinkedIn: <a href="https://www.linkedin.com/in/mukesh-d-a83ba8397" target="_blank" rel="noopener noreferrer">linkedin.com/in/mukesh-d-a83ba8397</a></span>
+            </div>
+        </header>
+
+        <section class="resume-section">
+            <h2 class="section-heading">Education</h2>
+            <div class="item-group">
+                <div class="item-header">
+                    <span class="item-title">First-Year College Student</span>
+                    <span class="item-subtitle">Undergraduate Studies</span>
+                </div>
+                <div class="item-subtitle" style="font-style: normal; margin-top: 2px;">
+                    Focus: Computer Science Foundations, Logic Building, Algorithm Design & Modern Web Development
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2 class="section-heading">Technical Skills</h2>
+            <div class="skills-table">
+                <div class="skill-cat">Languages</div>
+                <div class="skill-items">Python, JavaScript (ES6+), HTML5, CSS3</div>
+
+                <div class="skill-cat">Web & UI Design</div>
+                <div class="skill-items">Responsive Web Design, Flexbox, CSS Grid, Glassmorphism UI, DOM API</div>
+
+                <div class="skill-cat">Developer Tools</div>
+                <div class="skill-items">Git, GitHub, Visual Studio Code, Chrome DevTools, Terminal / CLI</div>
+
+                <div class="skill-cat">Core Competencies</div>
+                <div class="skill-items">Problem Solving, Clean Code, Semantic Web, Web Accessibility (a11y)</div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2 class="section-heading">Featured Projects</h2>
+
+            <div class="item-group">
+                <div class="item-header">
+                    <span class="item-title">ShopLedger</span>
+                    <span class="item-subtitle">Status: In Progress</span>
+                </div>
+                <div class="tech-inline">Tech Stack: React, JavaScript, UI/UX Design, State Management, FinTech Concept</div>
+                <ul class="bullet-list">
+                    <li>Conceptualizing and architecting a shop management and digital bookkeeping application for local merchants.</li>
+                    <li>Designing core modules: customer credit balance tracking (khata), daily sales records, and inventory alerts.</li>
+                    <li>Structuring an offline-first interface to ensure zero latency and reliable transaction logging.</li>
+                </ul>
+            </div>
+
+            <div class="item-group">
+                <div class="item-header">
+                    <span class="item-title">Personal Developer Portfolio (mukesh.dev)</span>
+                    <span class="item-subtitle">Status: Active Production</span>
+                </div>
+                <div class="tech-inline">Tech Stack: Semantic HTML5, Modern CSS3, Vanilla JavaScript, GitHub REST API</div>
+                <ul class="bullet-list">
+                    <li>Designed and engineered a dark forest/navy glassmorphic website with neon lime accents and custom typography.</li>
+                    <li>Built an in-browser interactive developer terminal supporting interactive commands (<code>help</code>, <code>skills</code>, <code>projects</code>, <code>clear</code>).</li>
+                    <li>Integrated the public GitHub REST API with live repository cards, loading skeletons, and graceful fallback states.</li>
+                    <li>Implemented accessible keyboard navigation, scroll reveal observers, and client-side contact validation.</li>
+                </ul>
+            </div>
+
+            <div class="item-group">
+                <div class="item-header">
+                    <span class="item-title">My First Website</span>
+                    <span class="item-subtitle">Status: Live on GitHub Pages</span>
+                </div>
+                <div class="tech-inline">Tech Stack: HTML5, CSS3, JavaScript, GitHub Pages</div>
+                <ul class="bullet-list">
+                    <li>Engineered a fully responsive web application marking a milestone in front-end development.</li>
+                    <li>Applied semantic markup and clean layout techniques without third-party frameworks.</li>
+                    <li>Live URL: <a href="https://mukeshdewasi4524-lab.github.io/my-first-website/" target="_blank" rel="noopener noreferrer">mukeshdewasi4524-lab.github.io/my-first-website/</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2 class="section-heading">Development Philosophy</h2>
+            <ul class="bullet-list">
+                <li><strong>Continuous Learning:</strong> Committed to deliberate daily coding practice, solving algorithmic puzzles, and exploring emerging web technologies.</li>
+                <li><strong>Clean Code First:</strong> Writing readable, semantic, and maintainable software without unnecessary dependencies or framework bloat.</li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+</html>

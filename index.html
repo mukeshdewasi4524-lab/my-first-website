@@ -1,147 +1,1226 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Developer Portfolio</title>
+    <!-- SEO & Metadata -->
+    <title>Mukesh Dewasi | Student Developer Portfolio</title>
+    <meta name="description" content="Personal developer portfolio of Mukesh Dewasi - Student Developer & first-year college student building modern web applications with Python, HTML, CSS, and JavaScript.">
+    <meta name="keywords" content="Mukesh Dewasi, Student Developer, web developer, portfolio, Python, JavaScript, CSS, HTML, ShopLedger, frontend developer">
+    <meta name="author" content="Mukesh Dewasi">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060b11">
 
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mukeshdewasi4524-lab.github.io/my-first-website/">
+    <meta property="og:title" content="Mukesh Dewasi | Student Developer Portfolio">
+    <meta property="og:description" content="Student Developer & first-year college student exploring computer science and web development. Explore interactive terminal, projects, and skills.">
+    <meta property="og:site_name" content="Mukesh Dewasi Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mukesh Dewasi | Student Developer Portfolio">
+    <meta name="twitter:description" content="Student Developer & first-year college student exploring computer science and web development. Explore interactive terminal, projects, and skills.">
+
+    <!-- Crisp SVG Terminal Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23060b11'/%3E%3Cpath d='M9 11l5 5-5 5M16 21h7' stroke='%23d7ff32' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+    <!-- Google Fonts: Manrope (Headings), DM Sans (Body), Fira Code (Terminal & Code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fira+Code:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- Navbar -->
+    <!-- Ambient Dark Forest/Navy Background Glows -->
+    <div class="ambient-background" aria-hidden="true">
+        <div class="background-glow glow-one"></div>
+        <div class="background-glow glow-two"></div>
+        <div class="background-glow glow-three"></div>
+        <div class="background-grid"></div>
+    </div>
 
-    <nav class="navbar">
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#home" class="logo" aria-label="Mukesh Dewasi Portfolio Home">
+                <span class="logo-text">Mukesh</span><span class="logo-accent">.dev</span>
+            </a>
 
-        <div class="logo">MyPortfolio<span>.</span></div>
+            <!-- Mobile Hamburger Button -->
+            <button class="menu-toggle nav-toggle" id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+                <span class="bar bar-1"></span>
+                <span class="bar bar-2"></span>
+                <span class="bar bar-3"></span>
+            </button>
 
-        <ul class="nav-links">
+            <!-- Navigation Links -->
+            <nav id="mainNav" aria-label="Main Navigation">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#terminal" class="nav-link">Terminal</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#github" class="nav-link">GitHub</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="mobile-nav-cta">
+                        <a href="resume.pdf" download="Mukesh_Dewasi_Resume.pdf" class="btn secondary-btn resume-mobile-btn">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span>Resume PDF</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
-            <li><a href="#home">Home</a></li>
+            <!-- Navbar Actions -->
+            <div class="navbar-actions">
+                <a href="resume.pdf" download="Mukesh_Dewasi_Resume.pdf" class="nav-resume-btn" aria-label="Download Resume (PDF)">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Resume</span>
+                </a>
 
-            <li><a href="#about">About</a></li>
+                <a href="#contact" class="nav-button">
+                    <span>Let's Talk</span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
 
-            <li><a href="#skills">Skills</a></li>
+    <!-- Main Content -->
+    <main id="main">
 
-            <li><a href="#projects">Projects</a></li>
+        <!-- ===== 1. HERO SECTION ===== -->
+        <section id="home" class="hero section-container" aria-label="Introduction">
+            <div class="hero-content reveal">
 
-            <li><a href="#contact">Contact</a></li>
+                <!-- Availability Badge -->
+                <div class="availability">
+                    <span class="status-dot"></span>
+                    <span>Available for learning & collaboration</span>
+                </div>
 
-        </ul>
+                <!-- Intro Greeting -->
+                <p class="intro">HELLO, I'M MUKESH DEWASI 👋</p>
 
-    </nav>
+                <!-- Hero Title with Dynamic Typing Animation -->
+                <h1 class="hero-title">
+                    Building Practical <br>
+                    <span class="typed-wrapper">
+                        <span class="highlight" id="typedText">Software</span>
+                        <span class="typing-cursor" aria-hidden="true">|</span>
+                    </span>
+                    Experiences.
+                </h1>
 
-    <!-- Hero Section -->
+                <!-- Bio Description -->
+                <p class="description">
+                    Student Developer and first-year college student exploring the world of programming
+                    and web development. Turning ideas into real-world software, one line of code at a time.
+                </p>
 
-    <section id="home" class="hero">
+                <!-- Hero CTA Buttons -->
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary-btn">
+                        <span>Explore My Work</span>
+                        <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
 
-        <p class="intro">HELLO, I'M A DEVELOPER 👋</p>
+                    <a href="resume.pdf" download="Mukesh_Dewasi_Resume.pdf" class="btn secondary-btn" aria-label="Download Mukesh's Resume in PDF format">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>Download Resume</span>
+                    </a>
 
-        <h1>
+                    <a href="#terminal" class="btn ghost-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                        <span>Interactive CLI</span>
+                    </a>
+                </div>
 
-            Building My <span>Digital</span> Journey.
+                <!-- Hero Social Links with Verified URLs -->
+                <div class="hero-socials">
+                    <a href="https://github.com/mukeshdewasi4524-lab"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Mukesh's GitHub Profile (opens in new tab)">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                        </svg>
+                        <span>GitHub</span>
+                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </a>
 
-        </h1>
+                    <span class="social-separator" aria-hidden="true"></span>
 
-        <p class="description">
+                    <a href="https://www.linkedin.com/in/mukesh-d-a83ba8397"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Mukesh's LinkedIn Profile (opens in new tab)">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66 0-.91-.74-1.66-1.66-1.66s-1.66.75-1.66 1.66c0 .92.74 1.66 1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </a>
 
-            I am learning Python, HTML, CSS and JavaScript.
+                    <span class="social-separator" aria-hidden="true"></span>
 
-            I love building creative things with code.
+                    <a href="#contact" class="touch-link" aria-label="Jump to Contact section">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>Get in touch</span>
+                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </a>
+                </div>
 
-        </p>
+            </div>
 
-        <a href="#projects" class="btn">
+            <!-- Hero Interactive Code Window Visual -->
+            <div class="hero-visual reveal">
+                <div class="visual-card" id="codeCard">
+                    <div class="visual-top">
+                        <div class="window-dots" aria-hidden="true">
+                            <span class="dot dot-close"></span>
+                            <span class="dot dot-minimize"></span>
+                            <span class="dot dot-expand"></span>
+                        </div>
+                        <div class="tab-indicator">
+                            <svg class="file-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                <polyline points="13 2 13 9 20 9"></polyline>
+                            </svg>
+                            <span>mukesh.js</span>
+                        </div>
+                        <span class="badge-js">ES6+</span>
+                    </div>
 
-            Explore My Work →
+                    <div class="code-content" tabindex="0" role="region" aria-label="Code snippet describing developer profile">
+                        <p><span class="code-purple">const</span> <span class="code-blue">developer</span> = {</p>
+                        <p class="indent">
+                            name: <span class="code-green">"Mukesh Dewasi"</span>,
+                        </p>
+                        <p class="indent">
+                            role: <span class="code-green">"Student Developer"</span>,
+                        </p>
+                        <p class="indent">
+                            education: <span class="code-green">"First-Year College Student"</span>,
+                        </p>
+                        <p class="indent">
+                            skills: [
+                        </p>
+                        <p class="indent double">
+                            <span class="code-yellow">"Python"</span>,
+                        </p>
+                        <p class="indent double">
+                            <span class="code-yellow">"HTML5"</span>,
+                        </p>
+                        <p class="indent double">
+                            <span class="code-yellow">"CSS3"</span>,
+                        </p>
+                        <p class="indent double">
+                            <span class="code-yellow">"JavaScript"</span>
+                        </p>
+                        <p class="indent">],</p>
+                        <p class="indent">
+                            mindset: <span class="code-green">"Learn. Build. Improve."</span>
+                        </p>
+                        <p>};</p>
+                        <br>
+                        <p>
+                            <span class="code-purple">while</span>
+                            (developer.mindset) {
+                        </p>
+                        <p class="indent">
+                            developer.<span class="code-blue">build</span>();
+                        </p>
+                        <p class="indent">
+                            developer.<span class="code-blue">improve</span>();
+                        </p>
+                        <p>}</p>
+                    </div>
 
-        </a>
+                    <div class="visual-footer">
+                        <span class="status-dot"></span>
+                        <span>Always learning. Always building.</span>
+                        <span class="code-lang-tag">JavaScript</span>
+                    </div>
+                </div>
 
-    </section>
+                <!-- Floating Badges -->
+                <div class="floating-tag tag-top">
+                    <span class="tag-icon">⚡</span>
+                    <span>Student Developer</span>
+                </div>
+                <div class="floating-tag tag-bottom">
+                    <span class="tag-icon">💡</span>
+                    <span>Learn. Build. Improve.</span>
+                </div>
+            </div>
 
-    <!-- About Section -->
+            <!-- Scroll Indicator -->
+            <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+                <span class="mouse-icon">
+                    <span class="wheel"></span>
+                </span>
+                <span class="scroll-text">SCROLL TO EXPLORE</span>
+            </a>
+        </section>
 
-    <section id="about" class="section">
+        <!-- ===== 2. ABOUT SECTION ===== -->
+        <section id="about" class="section-container section" aria-label="About Mukesh Dewasi">
 
-        <h2>About <span>Me</span></h2>
+            <div class="section-heading reveal">
+                <p class="section-label">GET TO KNOW ME</p>
+                <h2>About <span>Me</span></h2>
+                <p>A little introduction about who I am and what I do.</p>
+            </div>
 
-    <p>
-    I am a first-year college student passionate about
-    programming, web development and technology.
+            <div class="about-grid">
 
-    My goal is to become a skilled developer and build
-    real-world projects that solve problems.
-    </p>
+                <!-- Main Bio Glass Card -->
+                <article class="about-main glass-card reveal">
+                    <div class="card-header-line">
+                        <span class="card-number">01 / ABOUT</span>
+                        <span class="badge-status">Student Developer</span>
+                    </div>
 
-    </section>
+                    <h3>Curious mind.<br>
+                        <span>Creative builder.</span>
+                    </h3>
 
-    <!-- Skills Section -->
+                    <p>
+                        I am Mukesh Dewasi, a first-year college student passionate about
+                        programming, web development, and computer science.
+                    </p>
 
-    <section id="skills" class="section">
+                    <p>
+                        I enjoy learning new technologies, experimenting with ideas, and building
+                        practical software projects that solve real-world problems.
+                    </p>
 
-        <h2>My <span>Skills</span></h2>
+                    <p>
+                        My mission is to grow continuously as a developer by writing clean code,
+                        mastering foundational computer science principles, and creating thoughtful user experiences.
+                    </p>
 
-        <div class="skills">
+                    <div class="about-tags">
+                        <span class="tag-pill">🌱 First-Year Student</span>
+                        <span class="tag-pill">💻 Clean Code</span>
+                        <span class="tag-pill">🔍 Detail-Oriented</span>
+                        <span class="tag-pill">🚀 Problem Solver</span>
+                    </div>
 
-            <div>Python</div>
+                    <div class="about-actions">
+                        <a href="resume.pdf" download="Mukesh_Dewasi_Resume.pdf" class="btn secondary-btn" aria-label="Download Mukesh's Resume (PDF)">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span>Download Resume (PDF)</span>
+                        </a>
+                        <a href="#projects" class="btn text-link">
+                            <span>View my projects</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </article>
 
-            <div>HTML</div>
+                <!-- Side Highlights Stack -->
+                <div class="about-side">
 
-            <div>CSS</div>
+                    <div class="info-card glass-card reveal">
+                        <div class="info-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>Education</h4>
+                            <p class="info-highlight">First-Year College Student</p>
+                            <p class="info-desc">Building strong core fundamentals in computer science, logic formulation, algorithm design, and software engineering.</p>
+                        </div>
+                    </div>
 
-            <div>JavaScript</div>
+                    <div class="info-card glass-card reveal">
+                        <div class="info-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>Core Focus</h4>
+                            <p class="info-highlight">Programming & Web Development</p>
+                            <p class="info-desc">Practicing modern responsive frontend design, semantic markup, DOM manipulation, and Python scripting.</p>
+                        </div>
+                    </div>
 
+                    <div class="info-card glass-card reveal">
+                        <div class="info-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>Guiding Mindset</h4>
+                            <p class="info-highlight">Learn. Build. Improve.</p>
+                            <p class="info-desc">Dedicated to deliberate everyday coding, shipping functional code, and turning curiosity into practical software.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 3. SKILLS SECTION ===== -->
+        <section id="skills" class="section-container section" aria-label="Technical Skills">
+
+            <div class="section-heading reveal">
+                <p class="section-label">WHAT I WORK WITH</p>
+                <h2>My <span>Skills</span></h2>
+                <p>Technologies I am learning and using in my journey.</p>
+            </div>
+
+            <div class="skills-grid">
+
+                <!-- Python -->
+                <article class="skill-card glass-card reveal">
+                    <div class="skill-card-top">
+                        <div class="skill-icon python-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.91 2c-5.04 0-4.73 2.18-4.73 2.18l.01 2.27h4.81v.68H5.21S2 6.78 2 11.88c0 5.1 2.8 4.93 2.8 4.93h1.67v-2.35s-.09-2.8 2.76-2.8h4.74s2.68.04 2.68-2.61V4.65S17.06 2 11.91 2zM9.5 3.65a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8zm2.59 18.35c5.04 0 4.73-2.18 4.73-2.18l-.01-2.27h-4.81v-.68h6.79s3.21.35 3.21-4.75c0-5.1-2.8-4.93-2.8-4.93h-1.67v2.35s.09 2.8-2.76 2.8H9.99s-2.68-.04-2.68 2.61v4.4s-.41 2.65 4.78 2.65zm2.41-1.65a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8z"/>
+                            </svg>
+                        </div>
+                        <span class="skill-level-badge">Python 3</span>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Programming fundamentals, logic formulation, data structures, and problem-solving.</p>
+                    <div class="skill-topics">
+                        <span>Syntax</span>
+                        <span>Logic</span>
+                        <span>Problem Solving</span>
+                    </div>
+                    <div class="skill-footer">
+                        <span class="skill-level">Learning & Practicing</span>
+                        <div class="skill-progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-progress-fill python-fill"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- HTML5 -->
+                <article class="skill-card glass-card reveal">
+                    <div class="skill-card-top">
+                        <div class="skill-icon html-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3 2l1.8 18.1L12 22l7.2-1.9L21 2H3zm14.6 5.8l-.2 2.3H8.3l.2 2.3h8.6l-.6 6.3-4.5 1.3-4.5-1.3-.3-3.4h2.2l.2 1.7 2.4.7 2.4-.7.3-3H6.2l-.6-6.5h12z"/>
+                            </svg>
+                        </div>
+                        <span class="skill-level-badge">HTML5</span>
+                    </div>
+                    <h3>HTML</h3>
+                    <p>Building structured, accessible, and semantic web pages following modern W3C standards.</p>
+                    <div class="skill-topics">
+                        <span>Semantic Markup</span>
+                        <span>Accessibility (a11y)</span>
+                        <span>SEO</span>
+                    </div>
+                    <div class="skill-footer">
+                        <span class="skill-level">Learning & Practicing</span>
+                        <div class="skill-progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-progress-fill html-fill"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CSS3 -->
+                <article class="skill-card glass-card reveal">
+                    <div class="skill-card-top">
+                        <div class="skill-icon css-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3 2l1.8 18.1L12 22l7.2-1.9L21 2H3zm14.8 5.8l-1 10.7-4.8 1.4-4.8-1.4-.3-3.6h2.2l.2 1.9 2.7.8 2.7-.8.3-3.6H6.1l-.2-2.3h10.3l.2-2.3H5.9L5.7 6.4h12.3l-.2 1.4z"/>
+                            </svg>
+                        </div>
+                        <span class="skill-level-badge">CSS3</span>
+                    </div>
+                    <h3>CSS</h3>
+                    <p>Designing responsive, modern, and attractive interfaces with Flexbox, Grid, and animations.</p>
+                    <div class="skill-topics">
+                        <span>Flexbox & Grid</span>
+                        <span>Responsive UI</span>
+                        <span>Glassmorphism</span>
+                    </div>
+                    <div class="skill-footer">
+                        <span class="skill-level">Learning & Practicing</span>
+                        <div class="skill-progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-progress-fill css-fill"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- JavaScript -->
+                <article class="skill-card glass-card reveal">
+                    <div class="skill-card-top">
+                        <div class="skill-icon js-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3 3h18v18H3V3zm13.7 13.9c.7 0 1.3-.2 1.7-.5.4-.3.6-.8.6-1.4 0-.4-.1-.7-.3-.9-.2-.3-.5-.5-.8-.7-.4-.2-.8-.4-1.4-.6-.7-.3-1.3-.6-1.7-.9-.4-.3-.7-.7-.9-1.1-.2-.4-.3-.9-.3-1.5 0-.8.3-1.5.8-2.1.5-.6 1.3-.9 2.3-.9.7 0 1.3.1 1.9.4.5.3.9.7 1.1 1.2l-1.6 1c-.2-.4-.4-.6-.7-.8-.3-.2-.6-.2-1-.2-.5 0-.8.1-1.1.4-.3.2-.4.6-.4.9 0 .3.1.6.3.8.2.2.5.4.8.6.4.2.9.4 1.5.6.8.3 1.4.6 1.9 1 .4.4.7.8.9 1.3.2.5.3 1.1.3 1.7 0 .9-.3 1.7-.9 2.3-.6.6-1.5.9-2.5.9-1 0-1.8-.2-2.4-.7-.6-.5-1-1.1-1.2-1.9l1.7-.8c.1.5.3.9.6 1.2.3.2.7.4 1.2.4zm-7.3.3c.3.5.7.7 1.2.7.5 0 .8-.2 1-.5.3-.3.4-.9.4-1.7V9.7H14v6.1c0 1.4-.3 2.4-1 3.1-.7.7-1.6 1-2.7 1-.9 0-1.7-.2-2.3-.7-.6-.5-.9-1.2-1-2l1.6-.8c.1.5.2.8.5 1z"/>
+                            </svg>
+                        </div>
+                        <span class="skill-level-badge">ES6+</span>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Exploring interactive web development, DOM manipulation, events, and asynchronous programming.</p>
+                    <div class="skill-topics">
+                        <span>DOM API</span>
+                        <span>ES6+</span>
+                        <span>Events</span>
+                    </div>
+                    <div class="skill-footer">
+                        <span class="skill-level">Currently Learning</span>
+                        <div class="skill-progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-progress-fill js-fill"></div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ===== 4. INTERACTIVE DEVELOPER TERMINAL SECTION ===== -->
+        <section id="terminal" class="section-container section" aria-label="Interactive Developer Terminal">
+
+            <div class="section-heading reveal">
+                <p class="section-label">INTERACTIVE CLI</p>
+                <h2>Developer <span>Terminal</span></h2>
+                <p>Interact with my profile, skills, and projects directly via an in-browser command line.</p>
+            </div>
+
+            <div class="terminal-wrapper reveal">
+                <div class="terminal-window" id="terminalWindow">
+                    <!-- Terminal Top Controls -->
+                    <div class="terminal-top">
+                        <div class="terminal-dots" aria-hidden="true">
+                            <span class="dot dot-close"></span>
+                            <span class="dot dot-minimize"></span>
+                            <span class="dot dot-expand"></span>
+                        </div>
+                        <div class="terminal-title">
+                            <svg class="terminal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="4 17 10 11 4 5"></polyline>
+                                <line x1="12" y1="19" x2="20" y2="19"></line>
+                            </svg>
+                            <span>mukesh@dev: ~ (bash)</span>
+                        </div>
+                        <div class="terminal-actions">
+                            <button type="button" class="term-btn" id="terminalClearBtn" title="Clear terminal">clear</button>
+                        </div>
+                    </div>
+
+                    <!-- Terminal Output History Area -->
+                    <div class="terminal-body" id="terminalBody" tabindex="0" role="region" aria-label="Terminal output log">
+                        <div class="terminal-welcome">
+                            <p class="term-ascii">
+   __  __       _              _        _            
+  |  \/  |_   _| | _____  ___| |__    __| | _____   __
+  | |\/| | | | | |/ / _ \/ __| '_ \  / _` |/ _ \ \ / /
+  | |  | | |_| |   <  __/\__ \ | | || (_| |  __/\ V / 
+  |_|  |_|\__,_|_|\_\___||___/_| |_(_)__,_|\___| \_/  
+                            </p>
+                            <p class="term-intro-text">
+                                Welcome to Mukesh Dewasi's developer terminal v2.0.<br>
+                                Type <span class="term-highlight">'help'</span> to see available commands or click quick action chips below.
+                            </p>
+                        </div>
+
+                        <!-- Rendered Command History -->
+                        <div class="terminal-history" id="terminalHistory"></div>
+
+                        <!-- Active Input Row -->
+                        <div class="terminal-prompt-row">
+                            <span class="terminal-prompt">
+                                <span class="prompt-user">guest</span>@<span class="prompt-host">mukesh.dev</span>:<span class="prompt-path">~</span>$
+                            </span>
+                            <input type="text"
+                                   id="terminalInput"
+                                   class="terminal-input"
+                                   autocomplete="off"
+                                   autocorrect="off"
+                                   autocapitalize="off"
+                                   spellcheck="false"
+                                   aria-label="Terminal command input"
+                                   placeholder="type a command...">
+                        </div>
+                    </div>
+
+                    <!-- Quick Command Chips for Easy Touch/Click Navigation -->
+                    <div class="terminal-quick-chips" aria-label="Suggested terminal commands">
+                        <span class="quick-chips-label">Quick run:</span>
+                        <button type="button" class="term-chip" data-cmd="help">help</button>
+                        <button type="button" class="term-chip" data-cmd="about">about</button>
+                        <button type="button" class="term-chip" data-cmd="skills">skills</button>
+                        <button type="button" class="term-chip" data-cmd="projects">projects</button>
+                        <button type="button" class="term-chip" data-cmd="github">github</button>
+                        <button type="button" class="term-chip" data-cmd="linkedin">linkedin</button>
+                        <button type="button" class="term-chip" data-cmd="contact">contact</button>
+                        <button type="button" class="term-chip" data-cmd="clear">clear</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ===== 5. ADVANCED PROJECTS SHOWCASE ===== -->
+        <section id="projects" class="section-container section" aria-label="Featured Projects">
+
+            <div class="section-heading reveal">
+                <p class="section-label">MY CREATIONS</p>
+                <h2>Featured <span>Projects</span></h2>
+                <p>Some of my work and experiments with technology.</p>
+            </div>
+
+            <!-- Project Category Filter Pills -->
+            <div class="project-filters reveal" role="tablist" aria-label="Filter projects by category">
+                <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+                    <span>All Projects</span> <span class="filter-count">3</span>
+                </button>
+                <button type="button" class="filter-btn" data-filter="frontend" role="tab" aria-selected="false">
+                    <span>Frontend</span> <span class="filter-count">2</span>
+                </button>
+                <button type="button" class="filter-btn" data-filter="webapp" role="tab" aria-selected="false">
+                    <span>Web App</span> <span class="filter-count">1</span>
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projectsGrid">
+
+                <!-- Project 1: ShopLedger -->
+                <article class="project-card glass-card reveal" data-category="webapp" data-project-id="shopledger">
+                    <div class="project-preview preview-two">
+                        <div class="preview-symbol">S<span>.</span></div>
+                        <h3>ShopLedger</h3>
+                        <p>Smarter shop management & accounting concept</p>
+                        <div class="preview-lines" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="preview-tag-concept">Retail & Accounting Concept</div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="project-meta">
+                            <span class="project-category">01 / WEB APP</span>
+                            <span class="project-status progress-status">
+                                <span class="status-pulse-amber"></span> IN PROGRESS
+                            </span>
+                        </div>
+
+                        <h3>ShopLedger</h3>
+
+                        <p>
+                            A shop management project concept focused on making everyday business tasks,
+                            customer ledger records (khata), and inventory tracking simpler for local store owners.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>JavaScript</span>
+                            <span>UI/UX Design</span>
+                            <span>AI Concept</span>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="project-card-actions">
+                            <button type="button"
+                                    class="btn primary-btn project-btn project-modal-trigger"
+                                    data-project="shopledger"
+                                    aria-haspopup="dialog"
+                                    aria-expanded="false">
+                                <span>Preview Concept</span>
+                                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </button>
+
+                            <a href="https://github.com/mukeshdewasi4524-lab"
+                               class="btn secondary-btn project-btn"
+                               target="_blank" rel="noopener noreferrer"
+                               aria-label="View ShopLedger repository on GitHub (opens in new tab)">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: My First Website -->
+                <article class="project-card glass-card reveal" data-category="frontend" data-project-id="firstwebsite">
+                    <div class="project-preview preview-one">
+                        <div class="browser-bar">
+                            <div class="browser-dots" aria-hidden="true">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="browser-url">mukeshdewasi4524-lab.github.io/my-first-website/</span>
+                        </div>
+                        <div class="preview-content">
+                            <span class="preview-badge">02 / LIVE PROJECT</span>
+                            <h3>Building<br>My Digital<br><b>Journey.</b></h3>
+                            <div class="preview-meta-pill">HTML5 · CSS3 · Vanilla JS</div>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="project-meta">
+                            <span class="project-category">02 / FRONTEND</span>
+                            <span class="project-status status-live">
+                                <span class="status-dot"></span> LIVE
+                            </span>
+                        </div>
+
+                        <h3>My First Website</h3>
+
+                        <p>
+                            My personal developer portfolio website built from scratch using HTML,
+                            CSS, and JavaScript. Marked my very first digital milestone exploring responsive web development.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Responsive</span>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="project-card-actions">
+                            <a href="https://mukeshdewasi4524-lab.github.io/my-first-website/"
+                               class="btn primary-btn project-btn"
+                               target="_blank" rel="noopener noreferrer"
+                               aria-label="View Live Demo of My First Website (opens in new tab)">
+                                <span>Live Demo</span>
+                                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </a>
+
+                            <a href="https://github.com/mukeshdewasi4524-lab/my-first-website"
+                               class="btn secondary-btn project-btn"
+                               target="_blank" rel="noopener noreferrer"
+                               aria-label="View source code on GitHub (opens in new tab)">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Personal Developer Portfolio -->
+                <article class="project-card glass-card reveal" data-category="frontend" data-project-id="portfolio">
+                    <div class="project-preview preview-three">
+                        <div class="browser-bar">
+                            <div class="browser-dots" aria-hidden="true">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="browser-url">mukesh.dev</span>
+                        </div>
+                        <div class="preview-content">
+                            <span class="preview-badge">03 / ACTIVE PRODUCTION</span>
+                            <h3>Developer<br>Portfolio<br><b>Engine.</b></h3>
+                            <div class="preview-meta-pill">CLI · GitHub API · a11y</div>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="project-meta">
+                            <span class="project-category">03 / FRONTEND</span>
+                            <span class="project-status status-live">
+                                <span class="status-dot"></span> ACTIVE
+                            </span>
+                        </div>
+
+                        <h3>Personal Developer Portfolio</h3>
+
+                        <p>
+                            Modern, fast, and accessible developer portfolio engineered with pure HTML,
+                            modern CSS, and vanilla JavaScript. Features an in-browser interactive terminal and live GitHub integration.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Vanilla JS</span>
+                            <span>GitHub API</span>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="project-card-actions">
+                            <button type="button"
+                                    class="btn primary-btn project-btn project-modal-trigger"
+                                    data-project="portfolio"
+                                    aria-haspopup="dialog"
+                                    aria-expanded="false">
+                                <span>Details & Specs</span>
+                                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </button>
+
+                            <a href="https://github.com/mukeshdewasi4524-lab/my-first-website"
+                               class="btn secondary-btn project-btn"
+                               target="_blank" rel="noopener noreferrer"
+                               aria-label="View portfolio source code on GitHub (opens in new tab)">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ===== 6. GITHUB PUBLIC API INTEGRATION SECTION ===== -->
+        <section id="github" class="section-container section" aria-label="GitHub Repositories and Open Source">
+
+            <div class="section-heading reveal">
+                <p class="section-label">LIVE FROM GITHUB</p>
+                <h2>Open Source & <span>Repositories</span></h2>
+                <p>Public code and active repositories loaded directly from my GitHub profile via the GitHub REST API.</p>
+            </div>
+
+            <!-- GitHub Profile Banner Card -->
+            <div class="github-profile-card glass-card reveal">
+                <div class="gh-profile-header">
+                    <div class="gh-avatar-placeholder" id="ghAvatar" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="gh-profile-meta">
+                        <div class="gh-user-title">
+                            <h3 id="ghName">Mukesh Dewasi</h3>
+                            <span class="gh-badge" id="ghLogin">@mukeshdewasi4524-lab</span>
+                        </div>
+                        <p class="gh-bio" id="ghBio">Student Developer | Building with Python, HTML, CSS & JavaScript.</p>
+                    </div>
+                </div>
+
+                <div class="gh-profile-stats" id="ghStats">
+                    <div class="gh-stat-item">
+                        <span class="gh-stat-label">Public Repos</span>
+                        <span class="gh-stat-value" id="ghRepoCount">...</span>
+                    </div>
+                    <div class="gh-stat-item">
+                        <span class="gh-stat-label">GitHub URL</span>
+                        <a href="https://github.com/mukeshdewasi4524-lab"
+                           target="_blank" rel="noopener noreferrer"
+                           class="gh-stat-link">
+                            github.com/mukeshdewasi4524-lab ↗
+                        </a>
+                    </div>
+                    <div class="gh-stat-item">
+                        <button type="button" class="btn secondary-btn gh-refresh-btn" id="ghRefreshBtn" aria-label="Refresh GitHub Repositories">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="23 4 23 10 17 10"></polyline>
+                                <polyline points="1 20 1 14 7 14"></polyline>
+                                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                            </svg>
+                            <span>Refresh Live</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub Repositories Feed Grid -->
+            <div class="github-repos-grid" id="githubReposGrid" aria-live="polite">
+                <!-- Skeletons shown during initial fetch -->
+                <div class="repo-skeleton-card"></div>
+                <div class="repo-skeleton-card"></div>
+                <div class="repo-skeleton-card"></div>
+            </div>
+
+            <!-- API Status Notice Banner (Hidden unless fallback or notice) -->
+            <div class="github-status-notice" id="githubStatusNotice" hidden></div>
+
+        </section>
+
+        <!-- ===== 7. SMART CONTACT SECTION ===== -->
+        <section id="contact" class="section-container section" aria-label="Contact Mukesh Dewasi">
+
+            <div class="section-heading reveal">
+                <p class="section-label">LET'S CONNECT</p>
+                <h2>Have an idea?<br>Let's <span>build it.</span></h2>
+                <p>I am always interested in learning, collaborating and exploring new ideas. Send a message!</p>
+            </div>
+
+            <div class="contact-wrapper reveal">
+
+                <!-- Left Column: Contact Details & Verified Links -->
+                <div class="contact-info-card glass-card">
+                    <span class="card-number">GET IN TOUCH</span>
+                    <h3>Let's start a<br><span>conversation.</span></h3>
+                    <p class="contact-intro-text">
+                        Whether you want to discuss a software project, explore programming concepts,
+                        or connect regarding developer opportunities, I'd love to hear from you.
+                    </p>
+
+                    <div class="contact-detail-items">
+                        <!-- Location Item -->
+                        <div class="contact-item">
+                            <div class="contact-item-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-item-info">
+                                <span class="label">Location</span>
+                                <span class="value static-value">India · Available Remotely</span>
+                            </div>
+                        </div>
+
+                        <!-- LinkedIn Item -->
+                        <div class="contact-item">
+                            <div class="contact-item-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66 0-.91-.74-1.66-1.66-1.66s-1.66.75-1.66 1.66c0 .92.74 1.66 1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-info">
+                                <span class="label">LinkedIn Profile</span>
+                                <a href="https://www.linkedin.com/in/mukesh-d-a83ba8397"
+                                   target="_blank" rel="noopener noreferrer"
+                                   class="value"
+                                   aria-label="Mukesh's verified LinkedIn Profile (opens in new tab)">
+                                    linkedin.com/in/mukesh-d-a83ba8397 ↗
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- GitHub Item -->
+                        <div class="contact-item">
+                            <div class="contact-item-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-item-info">
+                                <span class="label">GitHub Profile</span>
+                                <a href="https://github.com/mukeshdewasi4524-lab"
+                                   target="_blank" rel="noopener noreferrer"
+                                   class="value"
+                                   aria-label="Mukesh's GitHub Profile (opens in new tab)">
+                                    github.com/mukeshdewasi4524-lab ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Verified Social Channels -->
+                    <div class="contact-social-pills">
+                        <a href="https://www.linkedin.com/in/mukesh-d-a83ba8397"
+                           target="_blank" rel="noopener noreferrer"
+                           class="social-pill"
+                           aria-label="Connect on LinkedIn (opens in new tab)">
+                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66 0-.91-.74-1.66-1.66-1.66s-1.66.75-1.66 1.66c0 .92.74 1.66 1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+                            </svg>
+                            <span>LinkedIn</span>
+                            <span class="arrow">↗</span>
+                        </a>
+
+                        <a href="https://github.com/mukeshdewasi4524-lab"
+                           target="_blank" rel="noopener noreferrer"
+                           class="social-pill"
+                           aria-label="Follow on GitHub (opens in new tab)">
+                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                            </svg>
+                            <span>GitHub</span>
+                            <span class="arrow">↗</span>
+                        </a>
+
+                        <a href="resume.pdf" download="Mukesh_Dewasi_Resume.pdf" class="social-pill resume-pill" aria-label="Download Resume (PDF)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span>Resume PDF</span>
+                            <span class="arrow">↓</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Professional Validation-Ready Contact Form -->
+                <div class="contact-form-container glass-card">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-header">
+                            <h3>Send a Message</h3>
+                            <p>Fill out the fields below. A pre-addressed dispatch is formatted upon verification.</p>
+                        </div>
+
+                        <!-- Form Feedback Status Banner -->
+                        <div class="form-feedback" id="formFeedback" role="status" aria-live="polite" hidden></div>
+
+                        <!-- Name Field -->
+                        <div class="form-group">
+                            <label for="name" class="form-label">
+                                Your Name <span class="required" aria-hidden="true">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                <input type="text"
+                                       id="name"
+                                       name="name"
+                                       class="form-input"
+                                       placeholder="e.g. Alex Sharma"
+                                       autocomplete="name"
+                                       required>
+                            </div>
+                            <span class="error-msg" id="nameError" role="alert" aria-live="assertive"></span>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                Email Address <span class="required" aria-hidden="true">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <input type="email"
+                                       id="email"
+                                       name="email"
+                                       class="form-input"
+                                       placeholder="e.g. alex@example.com"
+                                       autocomplete="email"
+                                       required>
+                            </div>
+                            <span class="error-msg" id="emailError" role="alert" aria-live="assertive"></span>
+                        </div>
+
+                        <!-- Subject Field -->
+                        <div class="form-group">
+                            <label for="subject" class="form-label">
+                                Subject <span class="required" aria-hidden="true">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <line x1="4" y1="9" x2="20" y2="9"></line>
+                                    <line x1="4" y1="15" x2="20" y2="15"></line>
+                                    <line x1="10" y1="3" x2="8" y2="21"></line>
+                                    <line x1="16" y1="3" x2="14" y2="21"></line>
+                                </svg>
+                                <input type="text"
+                                       id="subject"
+                                       name="subject"
+                                       class="form-input"
+                                       placeholder="e.g. Project Inquiry or Hello"
+                                       required>
+                            </div>
+                            <span class="error-msg" id="subjectError" role="alert" aria-live="assertive"></span>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="form-group">
+                            <div class="label-with-count">
+                                <label for="message" class="form-label">
+                                    Message <span class="required" aria-hidden="true">*</span>
+                                </label>
+                                <span class="char-counter" id="charCounter" aria-hidden="true">0 / 500</span>
+                            </div>
+                            <div class="input-wrapper textarea-wrapper">
+                                <textarea id="message"
+                                          name="message"
+                                          class="form-input form-textarea"
+                                          rows="4"
+                                          maxlength="500"
+                                          placeholder="Hello Mukesh, I would like to connect regarding..."
+                                          required></textarea>
+                            </div>
+                            <span class="error-msg" id="messageError" role="alert" aria-live="assertive"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn primary-btn submit-btn" id="submitBtn">
+                            <span class="btn-text">Format & Send Message</span>
+                            <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                            <span class="btn-spinner" aria-hidden="true"></span>
+                        </button>
+
+                        <p class="form-disclaimer">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            Direct client-side routing. No tracking or third-party cookies.
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="logo-text">Mukesh</span><span class="logo-accent">.dev</span>
+                </a>
+                <p class="footer-tagline">
+                    Student Developer & first-year college student turning ideas into real-world software experiences.
+                </p>
+            </div>
+
+            <div class="footer-nav">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#terminal">Terminal</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#github">GitHub</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="resume.pdf" download="Mukesh_Dewasi_Resume.pdf">Resume</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-socials">
+                <h4>Verified Profiles</h4>
+                <div class="footer-social-links">
+                    <a href="https://github.com/mukeshdewasi4524-lab"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Mukesh's GitHub Profile (opens in new tab)">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mukesh-d-a83ba8397"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Mukesh's LinkedIn Profile (opens in new tab)">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66 0-.91-.74-1.66-1.66-1.66s-1.66.75-1.66 1.66c0 .92.74 1.66 1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="resume.html" target="_blank" rel="noopener noreferrer" aria-label="View print-ready HTML resume">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                        </svg>
+                        <span>Web Resume</span>
+                    </a>
+                </div>
+            </div>
         </div>
 
-    </section>
-
-    <!-- Projects Section -->
-
-    <section id="projects" class="section">
-
-        <h2>My <span>Projects</span></h2>
-
-        <div class="project-card">
-
-            <h3>My First Website</h3>
-
-            <p>My first website created using HTML, CSS and JavaScript.</p>
-
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; <span id="year"></span> Mukesh Dewasi. Built with passion, HTML, CSS & vanilla JavaScript.</p>
+                <a href="#home" class="footer-back-to-top" aria-label="Scroll back to top of the page">
+                    <span>Back to top</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="12" y1="19" x2="12" y2="5"></line>
+                        <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                </a>
+            </div>
         </div>
-
-    </section>
-
-    <!-- Contact Section -->
-
-    <section id="contact" class="section">
-
-        <h2>Let's <span>Connect</span></h2>
-
-        <p>Have a project idea? Let's connect!</p>
-
-        <a href="mailto:your-email@example.com" class="btn">
-
-            Contact Me
-
-        </a>
-
-    </section>
-
-    <footer>
-
-        <p>©️ 2026 My Portfolio. Built with ❤️ and Code.</p>
-
     </footer>
 
-    <script src="script.js"></script>
+    <!-- ===== FLOATING BACK TO TOP BUTTON ===== -->
+    <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
 
+    <!-- ===== SHARED PROJECT DETAILS MODAL ===== -->
+    <div class="modal-overlay" id="projectDetailsModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" hidden>
+        <div class="modal-card glass-card">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="preview-badge" id="projectModalCategory">PROJECT DETAILS</span>
+                    <h3 id="projectModalTitle">Project <span class="highlight">Overview</span></h3>
+                </div>
+                <button class="modal-close-btn" id="projectModalCloseBtn" aria-label="Close dialog">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-body" id="projectModalBody">
+                <!-- Injected dynamically based on project clicked -->
+            </div>
+
+            <div class="modal-footer" id="projectModalFooter">
+                <!-- Injected action buttons -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== TOAST NOTIFICATION CONTAINER ===== -->
+    <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Deferred Vanilla JavaScript -->
+    <script src="script.js" defer></script>
 </body>
-
 </html>

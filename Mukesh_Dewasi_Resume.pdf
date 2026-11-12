@@ -1,0 +1,278 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792]
+   /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R >> >>
+   /Contents 7 0 R
+   /Annots [8 0 R 9 0 R]
+>>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+7 0 obj
+<< /Length 4432 >>
+stream
+0.843 1.0 0.196 rg
+50 758 512 4 re f
+BT
+0.04 0.07 0.12 rg
+/F2 24 Tf
+50 726 Td
+(MUKESH DEWASI) Tj
+ET
+BT
+0.16 0.26 0.40 rg
+/F2 12 Tf
+50 708 Td
+(Student Developer | First-Year College Student) Tj
+ET
+BT
+0.25 0.30 0.38 rg
+/F1 9.5 Tf
+50 690 Td
+(Location: India   |   GitHub: github.com/mukeshdewasi4524-lab   |   LinkedIn: linkedin.com/in/mukesh-d-a83ba8397) Tj
+ET
+0.85 0.88 0.92 RG
+1 w
+50 678 m 562 678 l S
+0.843 1.0 0.196 rg
+50 652 4 14 re f
+BT
+0.04 0.07 0.12 rg
+/F2 12 Tf
+62 654 Td
+(EDUCATION) Tj
+ET
+0.90 0.92 0.94 RG
+50 648 m 562 648 l S
+BT
+0.10 0.12 0.18 rg
+/F2 10.5 Tf
+50 632 Td
+(First-Year College Student) Tj
+ET
+BT
+0.30 0.35 0.42 rg
+/F1 9.5 Tf
+50 618 Td
+(Focus: Computer Science Foundations, Logic Formulation & Web Technologies) Tj
+ET
+0.843 1.0 0.196 rg
+50 590 4 14 re f
+BT
+0.04 0.07 0.12 rg
+/F2 12 Tf
+62 592 Td
+(TECHNICAL SKILLS) Tj
+ET
+0.90 0.92 0.94 RG
+50 586 m 562 586 l S
+BT
+0.08 0.12 0.20 rg
+/F2 9.5 Tf
+50 572 Td
+(Programming Languages:) Tj
+ET
+BT
+0.25 0.30 0.38 rg
+/F1 9.5 Tf
+180 572 Td
+(Python, JavaScript (ES6+)) Tj
+ET
+BT
+0.08 0.12 0.20 rg
+/F2 9.5 Tf
+50 556 Td
+(Web Technologies:) Tj
+ET
+BT
+0.25 0.30 0.38 rg
+/F1 9.5 Tf
+180 556 Td
+(HTML5, CSS3, Responsive Design, Flexbox, CSS Grid) Tj
+ET
+BT
+0.08 0.12 0.20 rg
+/F2 9.5 Tf
+50 540 Td
+(Developer Tools:) Tj
+ET
+BT
+0.25 0.30 0.38 rg
+/F1 9.5 Tf
+180 540 Td
+(Git, GitHub, VS Code, Browser DevTools, Terminal / Bash) Tj
+ET
+BT
+0.08 0.12 0.20 rg
+/F2 9.5 Tf
+50 524 Td
+(Core Competencies:) Tj
+ET
+BT
+0.25 0.30 0.38 rg
+/F1 9.5 Tf
+180 524 Td
+(Problem Solving, Clean Code, Semantic Markup, Web Accessibility (a11y)) Tj
+ET
+0.843 1.0 0.196 rg
+50 490 4 14 re f
+BT
+0.04 0.07 0.12 rg
+/F2 12 Tf
+62 492 Td
+(FEATURED PROJECTS) Tj
+ET
+0.90 0.92 0.94 RG
+50 486 m 562 486 l S
+BT
+0.06 0.10 0.18 rg
+/F2 11 Tf
+50 470 Td
+(ShopLedger) Tj
+/F3 9.5 Tf
+ 0.40 0.45 0.52 rg
+ ( | Retail Shop Management & Ledger Concept [In Progress]) Tj
+ET
+BT
+0.25 0.30 0.38 rg
+/F1 9 Tf
+50 456 Td
+(Technologies: React, JavaScript, Modern UI/UX, State Management, FinTech Concept) Tj
+ET
+BT
+0.20 0.24 0.30 rg
+/F1 9 Tf
+62 442 Td
+(- Designing a smart digital ledger and shop management tool to simplify merchant bookkeeping.) Tj
+0 -13 Td
+(- Implementing customer balance tracking, daily cash flow logs, and product inventory alerts.) Tj
+0 -13 Td
+(- Built with an offline-first mindset for fast response times in retail environments.) Tj
+ET
+BT
+0.06 0.10 0.18 rg
+/F2 11 Tf
+50 392 Td
+(Personal Developer Portfolio) Tj
+/F3 9.5 Tf
+ 0.40 0.45 0.52 rg
+ ( | Modern Interactive Portfolio [Active]) Tj
+ET
+BT
+0.25 0.30 0.38 rg
+/F1 9 Tf
+50 378 Td
+(Technologies: HTML5, CSS3, Vanilla JavaScript, GitHub REST API, Responsive Design) Tj
+ET
+BT
+0.20 0.24 0.30 rg
+/F1 9 Tf
+62 364 Td
+(- Engineered a production-ready portfolio featuring a dark navy and neon lime glassmorphism UI.) Tj
+0 -13 Td
+(- Built an in-browser interactive developer terminal supporting command-line exploration.) Tj
+0 -13 Td
+(- Integrated GitHub public REST API to display real-time repositories and language statistics.) Tj
+0 -13 Td
+(- Crafted client-side validation for contact interactions and full keyboard/screen-reader accessibility.) Tj
+ET
+BT
+0.06 0.10 0.18 rg
+/F2 11 Tf
+50 300 Td
+(My First Website) Tj
+/F3 9.5 Tf
+ 0.40 0.45 0.52 rg
+ ( | Personal Digital Milestone [Live]) Tj
+ET
+BT
+0.25 0.30 0.38 rg
+/F1 9 Tf
+50 286 Td
+(Technologies: HTML5, CSS3, JavaScript, GitHub Pages) Tj
+ET
+BT
+0.20 0.24 0.30 rg
+/F1 9 Tf
+62 272 Td
+(- Developed and deployed my first personal website exploring front-end web fundamentals.) Tj
+0 -13 Td
+(- Implemented responsive layouts with Flexbox and CSS Grid across mobile and desktop.) Tj
+0 -13 Td
+(- Deployed live via GitHub Pages: mukeshdewasi4524-lab.github.io/my-first-website/) Tj
+ET
+0.843 1.0 0.196 rg
+50 218 4 14 re f
+BT
+0.04 0.07 0.12 rg
+/F2 12 Tf
+62 220 Td
+(DEVELOPMENT PRINCIPLES) Tj
+ET
+0.90 0.92 0.94 RG
+50 214 m 562 214 l S
+BT
+0.20 0.24 0.30 rg
+/F1 9 Tf
+50 198 Td
+(1. Learn. Build. Improve: Committed to consistent daily coding, building practical tools, and mastering fundamentals.) Tj
+0 -14 Td
+(2. Clean Code & Simplicity: Prioritizing semantic HTML, modular CSS, readable vanilla JS, and zero bloat.) Tj
+0 -14 Td
+(3. Accessibility & Performance: Striving to make digital experiences fast, responsive, and usable for everyone.) Tj
+ET
+0.85 0.88 0.92 RG
+0.75 w
+50 135 m 562 135 l S
+BT
+0.40 0.45 0.52 rg
+/F1 8.5 Tf
+50 118 Td
+(Mukesh Dewasi  --  Student Developer Resume  --  github.com/mukeshdewasi4524-lab  --  Single Page Document) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Annot /Subtype /Link
+   /Rect [140 684 310 700]
+   /Border [0 0 0]
+   /A << /S /URI /URI (https://github.com/mukeshdewasi4524-lab) >>
+>>
+endobj
+9 0 obj
+<< /Type /Annot /Subtype /Link
+   /Rect [360 684 560 700]
+   /Border [0 0 0]
+   /A << /S /URI (https://www.linkedin.com/in/mukesh-d-a83ba8397) >>
+>>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000292 00000 n 
+0000000389 00000 n 
+0000000491 00000 n 
+0000000596 00000 n 
+0000005080 00000 n 
+0000005242 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+5406
+%%EOF
