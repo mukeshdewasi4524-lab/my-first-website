@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO & Metadata -->
-    <title>Mukesh Dewasi | Student Developer Portfolio</title>
-    <meta name="description" content="Personal developer portfolio of Mukesh Dewasi - Student Developer & first-year college student building modern web applications with Python, HTML, CSS, and JavaScript.">
-    <meta name="keywords" content="Mukesh Dewasi, Student Developer, web developer, portfolio, Python, JavaScript, CSS, HTML, ShopLedger, frontend developer">
+    <title>Mukesh Dewasi | Student Developer & ShopLedger Flagship Portfolio</title>
+    <meta name="description" content="Personal developer portfolio of Mukesh Dewasi - Student Developer & first-year college student. Discover the flagship ShopLedger SaaS case study, interactive CLI terminal, projects, and skills in Python, HTML, CSS & JavaScript.">
+    <meta name="keywords" content="Mukesh Dewasi, Student Developer, ShopLedger, retail SaaS, Khata app, Python, JavaScript, CSS, HTML, frontend developer, creative developer, developer portfolio">
     <meta name="author" content="Mukesh Dewasi">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#060b11">
+    <meta name="theme-color" content="#0B0D10">
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mukeshdewasi4524-lab.github.io/my-first-website/">
-    <meta property="og:title" content="Mukesh Dewasi | Student Developer Portfolio">
-    <meta property="og:description" content="Student Developer & first-year college student exploring computer science and web development. Explore interactive terminal, projects, and skills.">
+    <meta property="og:title" content="Mukesh Dewasi | Creative Developer & ShopLedger Flagship Portfolio">
+    <meta property="og:description" content="Student Developer & creative builder crafting practical web applications. Featuring the ShopLedger SaaS case study, interactive terminal, and open source projects.">
     <meta property="og:site_name" content="Mukesh Dewasi Portfolio">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mukesh Dewasi | Student Developer Portfolio">
-    <meta name="twitter:description" content="Student Developer & first-year college student exploring computer science and web development. Explore interactive terminal, projects, and skills.">
+    <meta name="twitter:title" content="Mukesh Dewasi | Creative Developer & ShopLedger Flagship Portfolio">
+    <meta name="twitter:description" content="Student Developer & creative builder crafting practical web applications. Featuring the ShopLedger SaaS case study, interactive terminal, and open source projects.">
 
-    <!-- Crisp SVG Terminal Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23060b11'/%3E%3Cpath d='M9 11l5 5-5 5M16 21h7' stroke='%23d7ff32' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <!-- Crisp SVG Terminal Favicon in Obsidian & Electric Lime -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0D10' stroke='%23222731' stroke-width='1.5'/%3E%3Cpath d='M9 11l5 5-5 5M16 21h7' stroke='%23D7FF64' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 
-    <!-- Google Fonts: Manrope (Headings), DM Sans (Body), Fira Code (Terminal & Code) -->
+    <!-- Google Fonts: Space Grotesk (Editorial Display), Manrope (Headings), DM Sans (Body), JetBrains Mono (Code & Technical) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fira+Code:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -40,8 +40,9 @@
     <!-- Accessibility Skip Link -->
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- Ambient Dark Forest/Navy Background Glows -->
+    <!-- Ambient Midnight Forest Canvas & Glows -->
     <div class="ambient-background" aria-hidden="true">
+        <canvas id="ambientCanvas" class="ambient-canvas"></canvas>
         <div class="background-glow glow-one"></div>
         <div class="background-glow glow-two"></div>
         <div class="background-glow glow-three"></div>
@@ -56,7 +57,7 @@
             </a>
 
             <!-- Mobile Hamburger Button -->
-            <button class="menu-toggle nav-toggle" id="menuToggle"
+            <button type="button" class="menu-toggle nav-toggle" id="menuToggle"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
                 aria-controls="navLinks">
@@ -70,6 +71,8 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#journey" class="nav-link">Journey</a></li>
+                    <li><a href="#shopledger" class="nav-link flagship-nav-link"><span class="nav-star">★</span> ShopLedger</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#terminal" class="nav-link">Terminal</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -113,185 +116,152 @@
     <!-- Main Content -->
     <main id="main">
 
-        <!-- ===== 1. HERO SECTION ===== -->
+        <!-- ===== 1. HERO SECTION — CREATIVE EDITORIAL ===== -->
         <section id="home" class="hero section-container" aria-label="Introduction">
+            <div class="hero-giant-watermark" aria-hidden="true">MUKESH.DEV</div>
             <div class="hero-content reveal">
 
-                <!-- Availability Badge -->
-                <div class="availability">
-                    <span class="status-dot"></span>
-                    <span>Available for learning & collaboration</span>
+                <!-- Meta Top Bar: Status Badge & Location Coordinates -->
+                <div class="hero-meta-bar">
+                    <div class="status-badge-container">
+                        <span class="status-dot-pulse"></span>
+                        <span class="status-badge-text">FIRST-YEAR COLLEGE STUDENT · BUILDING PRACTICAL APPS</span>
+                    </div>
+                    <div class="hero-location-pill" aria-label="Location coordinates">
+                        <span class="geo-dot"></span>
+                        <span>26.2389° N, 73.0243° E · JODHPUR, IN</span>
+                    </div>
                 </div>
 
-                <!-- Intro Greeting -->
-                <p class="intro">HELLO, I'M MUKESH DEWASI 👋</p>
-
-                <!-- Hero Title with Dynamic Typing Animation -->
+                <!-- Editorial Headline & Dynamic Typing -->
                 <h1 class="hero-title">
-                    Building Practical <br>
-                    <span class="typed-wrapper">
-                        <span class="highlight" id="typedText">Software</span>
-                        <span class="typing-cursor" aria-hidden="true">|</span>
-                    </span>
-                    Experiences.
+                    <span class="hero-eyebrow">CREATIVE DEVELOPER &amp; STUDENT BUILDER</span>
+                    I TURN IDEAS INTO<br>
+                    <span class="highlight" id="typedText">INTERACTIVE</span> EXPERIENCES.
                 </h1>
 
-                <!-- Bio Description -->
-                <p class="description">
-                    Student Developer and first-year college student exploring the world of programming
-                    and web development. Turning ideas into real-world software, one line of code at a time.
+                <!-- Authentic Student Bio -->
+                <p class="hero-description">
+                    I am <strong>Mukesh Dewasi</strong>, a first-year college student and developer blending core programming
+                    fundamentals in Python with modern semantic frontend engineering. Creator of <strong>ShopLedger</strong> —
+                    exploring how thoughtful software simplifies daily retail operations for local merchants.
                 </p>
 
-                <!-- Hero CTA Buttons -->
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn primary-btn">
-                        <span>Explore My Work</span>
+                <!-- Core Stack Micro Badges -->
+                <div class="hero-stack-pills" aria-label="Core Technical Stack">
+                    <span class="stack-pill"><span class="pill-dot"></span> Python</span>
+                    <span class="stack-pill"><span class="pill-dot"></span> HTML5 &amp; CSS3</span>
+                    <span class="stack-pill"><span class="pill-dot"></span> JavaScript (ES6+)</span>
+                    <span class="stack-pill"><span class="pill-dot"></span> Git &amp; VS Code</span>
+                </div>
+
+                <!-- Call to Action Buttons -->
+                <div class="hero-actions">
+                    <a href="#shopledger" class="btn primary-btn flagship-hero-btn">
+                        <span class="star-icon">★</span>
+                        <span>Explore ShopLedger</span>
                         <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <line x1="7" y1="17" x2="17" y2="7"></line>
                             <polyline points="7 7 17 7 17 17"></polyline>
                         </svg>
                     </a>
 
-                    <a href="resume.pdf" download="Mukesh_Dewasi_Resume.pdf" class="btn secondary-btn" aria-label="Download Mukesh's Resume in PDF format">
+                    <a href="#projects" class="btn secondary-btn" aria-label="Explore Projects">
+                        <span>Explore Projects</span>
+                        <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                        </svg>
+                    </a>
+
+                    <a href="resume.pdf" download="Mukesh_Dewasi_Resume.pdf" class="btn ghost-btn resume-hero-btn" aria-label="Download Mukesh's Resume in PDF format">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="7 10 12 15 17 10"></polyline>
                             <line x1="12" y1="15" x2="12" y2="3"></line>
                         </svg>
-                        <span>Download Resume</span>
-                    </a>
-
-                    <a href="#terminal" class="btn ghost-btn">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="4 17 10 11 4 5"></polyline>
-                            <line x1="12" y1="19" x2="20" y2="19"></line>
-                        </svg>
-                        <span>Interactive CLI</span>
+                        <span>Resume (PDF)</span>
                     </a>
                 </div>
 
-                <!-- Hero Social Links with Verified URLs -->
+                <!-- Verified External Profile Links -->
                 <div class="hero-socials">
+                    <span class="social-label">Verified Profiles:</span>
                     <a href="https://github.com/mukeshdewasi4524-lab"
                        target="_blank" rel="noopener noreferrer"
+                       class="social-link"
                        aria-label="Mukesh's GitHub Profile (opens in new tab)">
                         <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
                         </svg>
                         <span>GitHub</span>
-                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                     </a>
-
-                    <span class="social-separator" aria-hidden="true"></span>
 
                     <a href="https://www.linkedin.com/in/mukesh-d-a83ba8397"
                        target="_blank" rel="noopener noreferrer"
+                       class="social-link"
                        aria-label="Mukesh's LinkedIn Profile (opens in new tab)">
                         <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66 0-.91-.74-1.66-1.66-1.66s-1.66.75-1.66 1.66c0 .92.74 1.66 1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
                         </svg>
                         <span>LinkedIn</span>
-                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                    </a>
-
-                    <span class="social-separator" aria-hidden="true"></span>
-
-                    <a href="#contact" class="touch-link" aria-label="Jump to Contact section">
-                        <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <span>Get in touch</span>
-                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                     </a>
                 </div>
 
             </div>
 
-            <!-- Hero Interactive Code Window Visual -->
-            <div class="hero-visual reveal">
+            <!-- Hero Visual: Creative Studio Code Window with 3D Tilt -->
+            <div class="hero-visual reveal" aria-hidden="true">
                 <div class="visual-card" id="codeCard">
-                    <div class="visual-top">
-                        <div class="window-dots" aria-hidden="true">
-                            <span class="dot dot-close"></span>
-                            <span class="dot dot-minimize"></span>
-                            <span class="dot dot-expand"></span>
+                    <!-- Window Controls -->
+                    <div class="window-bar">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
                         </div>
-                        <div class="tab-indicator">
-                            <svg class="file-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
-                                <polyline points="13 2 13 9 20 9"></polyline>
+                        <div class="window-title">
+                            <svg class="file-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
                             </svg>
-                            <span>mukesh.js</span>
+                            <span>mukesh_workspace.py</span>
                         </div>
-                        <span class="badge-js">ES6+</span>
+                        <div class="window-badge">Python 3 · Studio</div>
                     </div>
 
-                    <div class="code-content" tabindex="0" role="region" aria-label="Code snippet describing developer profile">
-                        <p><span class="code-purple">const</span> <span class="code-blue">developer</span> = {</p>
-                        <p class="indent">
-                            name: <span class="code-green">"Mukesh Dewasi"</span>,
-                        </p>
-                        <p class="indent">
-                            role: <span class="code-green">"Student Developer"</span>,
-                        </p>
-                        <p class="indent">
-                            education: <span class="code-green">"First-Year College Student"</span>,
-                        </p>
-                        <p class="indent">
-                            skills: [
-                        </p>
-                        <p class="indent double">
-                            <span class="code-yellow">"Python"</span>,
-                        </p>
-                        <p class="indent double">
-                            <span class="code-yellow">"HTML5"</span>,
-                        </p>
-                        <p class="indent double">
-                            <span class="code-yellow">"CSS3"</span>,
-                        </p>
-                        <p class="indent double">
-                            <span class="code-yellow">"JavaScript"</span>
-                        </p>
-                        <p class="indent">],</p>
-                        <p class="indent">
-                            mindset: <span class="code-green">"Learn. Build. Improve."</span>
-                        </p>
-                        <p>};</p>
-                        <br>
-                        <p>
-                            <span class="code-purple">while</span>
-                            (developer.mindset) {
-                        </p>
-                        <p class="indent">
-                            developer.<span class="code-blue">build</span>();
-                        </p>
-                        <p class="indent">
-                            developer.<span class="code-blue">improve</span>();
-                        </p>
-                        <p>}</p>
-                    </div>
+                    <!-- Code Snippet -->
+                    <pre class="code-body"><code><span class="code-comment"># Identity: Student Developer &amp; Creative Builder</span>
+<span class="code-keyword">class</span> <span class="code-class">MukeshDewasi</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(<span class="code-param">self</span>):
+        <span class="code-param">self</span>.name = <span class="code-string">"Mukesh Dewasi"</span>
+        <span class="code-param">self</span>.role = <span class="code-string">"Student Developer"</span>
+        <span class="code-param">self</span>.education = <span class="code-string">"First-Year College Student"</span>
+        <span class="code-param">self</span>.languages = [<span class="code-string">"Python"</span>, <span class="code-string">"HTML5"</span>, <span class="code-string">"CSS3"</span>, <span class="code-string">"JavaScript"</span>]
+        <span class="code-param">self</span>.flagship = <span class="code-string">"ShopLedger (Retail SaaS Concept)"</span>
 
-                    <div class="visual-footer">
-                        <span class="status-dot"></span>
-                        <span>Always learning. Always building.</span>
-                        <span class="code-lang-tag">JavaScript</span>
-                    </div>
-                </div>
+    <span class="code-keyword">def</span> <span class="code-function">current_mission</span>(<span class="code-param">self</span>):
+        <span class="code-keyword">return</span> {
+            <span class="code-string">"craft"</span>: <span class="code-string">"Practical web apps &amp; clean code"</span>,
+            <span class="code-string">"mindset"</span>: <span class="code-string">"Curiosity, foundations &amp; everyday execution"</span>,
+            <span class="code-string">"status"</span>: <span class="code-string">"Active building on mukesh.dev"</span>
+        }
 
-                <!-- Floating Badges -->
-                <div class="floating-tag tag-top">
-                    <span class="tag-icon">⚡</span>
-                    <span>Student Developer</span>
-                </div>
-                <div class="floating-tag tag-bottom">
-                    <span class="tag-icon">💡</span>
-                    <span>Learn. Build. Improve.</span>
+dev = <span class="code-class">MukeshDewasi</span>()
+print(f<span class="code-string">"Loaded: {dev.name} | Flagship: {dev.flagship}"</span>)</code></pre>
+
+                    <!-- Card Bottom Meta -->
+                    <div class="code-card-footer">
+                        <span class="terminal-tag">
+                            <span class="pulse-green"></span> UTF-8 · 0 Errors
+                        </span>
+                        <span class="terminal-stats">Vanilla Web Architecture</span>
+                    </div>
                 </div>
             </div>
 
             <!-- Scroll Indicator -->
-            <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+            <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
                 <span class="mouse-icon">
                     <span class="wheel"></span>
                 </span>
@@ -305,7 +275,7 @@
             <div class="section-heading reveal">
                 <p class="section-label">GET TO KNOW ME</p>
                 <h2>About <span>Me</span></h2>
-                <p>A little introduction about who I am and what I do.</p>
+                <p>An introduction to my background, technical focus, and development mindset.</p>
             </div>
 
             <div class="about-grid">
@@ -318,29 +288,29 @@
                     </div>
 
                     <h3>Curious mind.<br>
-                        <span>Creative builder.</span>
+                        <span>Practical builder.</span>
                     </h3>
 
                     <p>
-                        I am Mukesh Dewasi, a first-year college student passionate about
-                        programming, web development, and computer science.
+                        I am <strong>Mukesh Dewasi</strong>, a first-year college student passionate about
+                        programming, web development, and computer science fundamentals.
                     </p>
 
                     <p>
-                        I enjoy learning new technologies, experimenting with ideas, and building
-                        practical software projects that solve real-world problems.
+                        I enjoy learning core technologies thoroughly, understanding the internal mechanics of software,
+                        and building real-world projects like <strong>ShopLedger</strong> that make a tangible difference in everyday workflows.
                     </p>
 
                     <p>
-                        My mission is to grow continuously as a developer by writing clean code,
-                        mastering foundational computer science principles, and creating thoughtful user experiences.
+                        My mission is to grow continuously as an engineer by writing clean, accessible code,
+                        mastering foundational computer science principles, and creating thoughtful user experiences without unnecessary framework bloat.
                     </p>
 
                     <div class="about-tags">
                         <span class="tag-pill">🌱 First-Year Student</span>
                         <span class="tag-pill">💻 Clean Code</span>
                         <span class="tag-pill">🔍 Detail-Oriented</span>
-                        <span class="tag-pill">🚀 Problem Solver</span>
+                        <span class="tag-pill">🚀 Practical Builder</span>
                     </div>
 
                     <div class="about-actions">
@@ -352,15 +322,15 @@
                             </svg>
                             <span>Download Resume (PDF)</span>
                         </a>
-                        <a href="#projects" class="btn text-link">
-                            <span>View my projects</span>
+                        <a href="#shopledger" class="btn text-link">
+                            <span>Explore ShopLedger</span>
                             <span class="arrow">→</span>
                         </a>
                     </div>
                 </article>
 
-                <!-- Side Highlights Stack -->
-                <div class="about-side">
+                <!-- Side Fact Cards -->
+                <div class="about-side-cards">
 
                     <div class="info-card glass-card reveal">
                         <div class="info-icon" aria-hidden="true">
@@ -370,9 +340,9 @@
                             </svg>
                         </div>
                         <div class="info-text">
-                            <h4>Education</h4>
+                            <h4>Education Status</h4>
                             <p class="info-highlight">First-Year College Student</p>
-                            <p class="info-desc">Building strong core fundamentals in computer science, logic formulation, algorithm design, and software engineering.</p>
+                            <p class="info-desc">Exploring core computer science concepts, programming logic, algorithms, and web technologies.</p>
                         </div>
                     </div>
 
@@ -407,121 +377,1130 @@
             </div>
         </section>
 
-        <!-- ===== 3. SKILLS SECTION ===== -->
-        <section id="skills" class="section-container section" aria-label="Technical Skills">
+        <!-- ===== 3. DEVELOPER JOURNEY SECTION ===== -->
+        <section id="journey" class="section-container section" aria-label="My Developer Journey">
 
             <div class="section-heading reveal">
-                <p class="section-label">WHAT I WORK WITH</p>
-                <h2>My <span>Skills</span></h2>
-                <p>Technologies I am learning and using in my journey.</p>
+                <p class="section-label">MY PATH IN TECH</p>
+                <h2>My Developer <span>Journey</span></h2>
+                <p>An authentic roadmap of how I started with programming fundamentals, progressed into frontend engineering, and began building practical software.</p>
             </div>
 
-            <div class="skills-grid">
+            <div class="timeline-container reveal">
+                <div class="timeline-spine" aria-hidden="true"></div>
 
-                <!-- Python -->
-                <article class="skill-card glass-card reveal">
-                    <div class="skill-card-top">
-                        <div class="skill-icon python-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M11.91 2c-5.04 0-4.73 2.18-4.73 2.18l.01 2.27h4.81v.68H5.21S2 6.78 2 11.88c0 5.1 2.8 4.93 2.8 4.93h1.67v-2.35s-.09-2.8 2.76-2.8h4.74s2.68.04 2.68-2.61V4.65S17.06 2 11.91 2zM9.5 3.65a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8zm2.59 18.35c5.04 0 4.73-2.18 4.73-2.18l-.01-2.27h-4.81v-.68h6.79s3.21.35 3.21-4.75c0-5.1-2.8-4.93-2.8-4.93h-1.67v2.35s.09 2.8-2.76 2.8H9.99s-2.68-.04-2.68 2.61v4.4s-.41 2.65 4.78 2.65zm2.41-1.65a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8z"/>
-                            </svg>
+                <!-- Step 1 -->
+                <div class="timeline-milestone reveal">
+                    <div class="milestone-badge">01</div>
+                    <div class="milestone-card glass-card">
+                        <div class="milestone-header">
+                            <span class="milestone-phase">Phase 01 · Foundations</span>
+                            <span class="milestone-status">Completed</span>
                         </div>
-                        <span class="skill-level-badge">Python 3</span>
-                    </div>
-                    <h3>Python</h3>
-                    <p>Programming fundamentals, logic formulation, data structures, and problem-solving.</p>
-                    <div class="skill-topics">
-                        <span>Syntax</span>
-                        <span>Logic</span>
-                        <span>Problem Solving</span>
-                    </div>
-                    <div class="skill-footer">
-                        <span class="skill-level">Learning & Practicing</span>
-                        <div class="skill-progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                            <div class="skill-progress-fill python-fill"></div>
+                        <h3>Starting with Python</h3>
+                        <p>Began my programming journey with Python. Focused on core computer science foundations, logic formulation, control flow, loops, data structures, and algorithmic problem-solving.</p>
+                        <div class="milestone-skills">
+                            <span>Python 3</span>
+                            <span>Logic Building</span>
+                            <span>Data Structures</span>
+                            <span>CLI Scripts</span>
                         </div>
                     </div>
-                </article>
+                </div>
 
-                <!-- HTML5 -->
-                <article class="skill-card glass-card reveal">
-                    <div class="skill-card-top">
-                        <div class="skill-icon html-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M3 2l1.8 18.1L12 22l7.2-1.9L21 2H3zm14.6 5.8l-.2 2.3H8.3l.2 2.3h8.6l-.6 6.3-4.5 1.3-4.5-1.3-.3-3.4h2.2l.2 1.7 2.4.7 2.4-.7.3-3H6.2l-.6-6.5h12z"/>
-                            </svg>
+                <!-- Step 2 -->
+                <div class="timeline-milestone reveal">
+                    <div class="milestone-badge">02</div>
+                    <div class="milestone-card glass-card">
+                        <div class="milestone-header">
+                            <span class="milestone-phase">Phase 02 · Web Exploration</span>
+                            <span class="milestone-status">Completed</span>
                         </div>
-                        <span class="skill-level-badge">HTML5</span>
-                    </div>
-                    <h3>HTML</h3>
-                    <p>Building structured, accessible, and semantic web pages following modern W3C standards.</p>
-                    <div class="skill-topics">
-                        <span>Semantic Markup</span>
-                        <span>Accessibility (a11y)</span>
-                        <span>SEO</span>
-                    </div>
-                    <div class="skill-footer">
-                        <span class="skill-level">Learning & Practicing</span>
-                        <div class="skill-progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                            <div class="skill-progress-fill html-fill"></div>
+                        <h3>Exploring the Web Platform</h3>
+                        <p>Developed curiosity about how modern websites function. Studied client-server architecture, HTTP request-response cycles, and how browsers parse and render document trees.</p>
+                        <div class="milestone-skills">
+                            <span>Web Architecture</span>
+                            <span>Browser DevTools</span>
+                            <span>HTTP Fundamentals</span>
                         </div>
                     </div>
-                </article>
+                </div>
 
-                <!-- CSS3 -->
-                <article class="skill-card glass-card reveal">
-                    <div class="skill-card-top">
-                        <div class="skill-icon css-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M3 2l1.8 18.1L12 22l7.2-1.9L21 2H3zm14.8 5.8l-1 10.7-4.8 1.4-4.8-1.4-.3-3.6h2.2l.2 1.9 2.7.8 2.7-.8.3-3.6H6.1l-.2-2.3h10.3l.2-2.3H5.9L5.7 6.4h12.3l-.2 1.4z"/>
-                            </svg>
+                <!-- Step 3 -->
+                <div class="timeline-milestone reveal">
+                    <div class="milestone-badge">03</div>
+                    <div class="milestone-card glass-card">
+                        <div class="milestone-header">
+                            <span class="milestone-phase">Phase 03 · Structuring & Styling</span>
+                            <span class="milestone-status">Completed</span>
                         </div>
-                        <span class="skill-level-badge">CSS3</span>
-                    </div>
-                    <h3>CSS</h3>
-                    <p>Designing responsive, modern, and attractive interfaces with Flexbox, Grid, and animations.</p>
-                    <div class="skill-topics">
-                        <span>Flexbox & Grid</span>
-                        <span>Responsive UI</span>
-                        <span>Glassmorphism</span>
-                    </div>
-                    <div class="skill-footer">
-                        <span class="skill-level">Learning & Practicing</span>
-                        <div class="skill-progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                            <div class="skill-progress-fill css-fill"></div>
+                        <h3>Mastering Semantic HTML5 & Modern CSS</h3>
+                        <p>Learned to build accessible, semantic page structures and responsive layouts using modern CSS Flexbox, CSS Grid, custom properties (variables), and glassmorphism styling.</p>
+                        <div class="milestone-skills">
+                            <span>HTML5</span>
+                            <span>CSS3 Grid & Flexbox</span>
+                            <span>Responsive Design</span>
+                            <span>Web a11y</span>
                         </div>
                     </div>
-                </article>
+                </div>
 
-                <!-- JavaScript -->
-                <article class="skill-card glass-card reveal">
-                    <div class="skill-card-top">
-                        <div class="skill-icon js-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M3 3h18v18H3V3zm13.7 13.9c.7 0 1.3-.2 1.7-.5.4-.3.6-.8.6-1.4 0-.4-.1-.7-.3-.9-.2-.3-.5-.5-.8-.7-.4-.2-.8-.4-1.4-.6-.7-.3-1.3-.6-1.7-.9-.4-.3-.7-.7-.9-1.1-.2-.4-.3-.9-.3-1.5 0-.8.3-1.5.8-2.1.5-.6 1.3-.9 2.3-.9.7 0 1.3.1 1.9.4.5.3.9.7 1.1 1.2l-1.6 1c-.2-.4-.4-.6-.7-.8-.3-.2-.6-.2-1-.2-.5 0-.8.1-1.1.4-.3.2-.4.6-.4.9 0 .3.1.6.3.8.2.2.5.4.8.6.4.2.9.4 1.5.6.8.3 1.4.6 1.9 1 .4.4.7.8.9 1.3.2.5.3 1.1.3 1.7 0 .9-.3 1.7-.9 2.3-.6.6-1.5.9-2.5.9-1 0-1.8-.2-2.4-.7-.6-.5-1-1.1-1.2-1.9l1.7-.8c.1.5.3.9.6 1.2.3.2.7.4 1.2.4zm-7.3.3c.3.5.7.7 1.2.7.5 0 .8-.2 1-.5.3-.3.4-.9.4-1.7V9.7H14v6.1c0 1.4-.3 2.4-1 3.1-.7.7-1.6 1-2.7 1-.9 0-1.7-.2-2.3-.7-.6-.5-.9-1.2-1-2l1.6-.8c.1.5.2.8.5 1z"/>
-                            </svg>
+                <!-- Step 4 -->
+                <div class="timeline-milestone reveal">
+                    <div class="milestone-badge">04</div>
+                    <div class="milestone-card glass-card">
+                        <div class="milestone-header">
+                            <span class="milestone-phase">Phase 04 · Interactivity</span>
+                            <span class="milestone-status">Completed</span>
                         </div>
-                        <span class="skill-level-badge">ES6+</span>
-                    </div>
-                    <h3>JavaScript</h3>
-                    <p>Exploring interactive web development, DOM manipulation, events, and asynchronous programming.</p>
-                    <div class="skill-topics">
-                        <span>DOM API</span>
-                        <span>ES6+</span>
-                        <span>Events</span>
-                    </div>
-                    <div class="skill-footer">
-                        <span class="skill-level">Currently Learning</span>
-                        <div class="skill-progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
-                            <div class="skill-progress-fill js-fill"></div>
+                        <h3>Dynamic Logic with Vanilla JavaScript</h3>
+                        <p>Learned JavaScript from the ground up without relying on heavy frameworks: DOM manipulation, asynchronous programming (Fetch API, Promises), event-driven architecture, and state management.</p>
+                        <div class="milestone-skills">
+                            <span>JavaScript (ES6+)</span>
+                            <span>DOM Manipulation</span>
+                            <span>Async / Await</span>
+                            <span>State Logic</span>
                         </div>
                     </div>
-                </article>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="timeline-milestone reveal">
+                    <div class="milestone-badge">05</div>
+                    <div class="milestone-card glass-card">
+                        <div class="milestone-header">
+                            <span class="milestone-phase">Phase 05 · Shipping Real Projects</span>
+                            <span class="milestone-status">Completed</span>
+                        </div>
+                        <h3>Building & Shipping Live Websites</h3>
+                        <p>Published "My First Website" live on GitHub Pages, turning theory into publicly accessible code. Engineered this custom developer portfolio with zero external framework dependencies.</p>
+                        <div class="milestone-skills">
+                            <span>Git & GitHub</span>
+                            <span>GitHub Pages</span>
+                            <span>Production Deployment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="timeline-milestone flagship-milestone reveal">
+                    <div class="milestone-badge flagship-badge">★</div>
+                    <div class="milestone-card glass-card flagship-card">
+                        <div class="milestone-header">
+                            <span class="milestone-phase flagship-phase">Phase 06 · Flagship Project</span>
+                            <span class="milestone-status flagship-status">Active In-Progress</span>
+                        </div>
+                        <h3>Architecting ShopLedger (SaaS Case Study)</h3>
+                        <p>Identified the daily friction of physical paper Khata books in local retail shops. Began designing and building ShopLedger to digitize customer credit, daily sales, and inventory alerts.</p>
+                        <div class="milestone-skills">
+                            <span>React</span>
+                            <span>Vite</span>
+                            <span>Digital Khata</span>
+                            <span>SaaS Product Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="timeline-milestone reveal">
+                    <div class="milestone-badge">07</div>
+                    <div class="milestone-card glass-card">
+                        <div class="milestone-header">
+                            <span class="milestone-phase">Phase 07 · Emerging Tech</span>
+                            <span class="milestone-status">Research & Design</span>
+                        </div>
+                        <h3>Exploring AI Integration (Gemini API)</h3>
+                        <p>Researching Google Gemini API integration to explore how conversational AI can provide plain-language cashflow digests and inventory forecasting for small merchants.</p>
+                        <div class="milestone-skills">
+                            <span>Gemini API Concept</span>
+                            <span>Prompt Architecture</span>
+                            <span>AI Insights</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="timeline-milestone reveal">
+                    <div class="milestone-badge">08</div>
+                    <div class="milestone-card glass-card">
+                        <div class="milestone-header">
+                            <span class="milestone-phase">Phase 08 · Future Roadmap</span>
+                            <span class="milestone-status">Ongoing Goal</span>
+                        </div>
+                        <h3>Future Goals & Full-Stack Engineering</h3>
+                        <p>Committed to continuous growth: mastering scalable backend API engineering, relational database design (PostgreSQL/SQL), authentication, and distributed full-stack architecture.</p>
+                        <div class="milestone-skills">
+                            <span>Backend Systems</span>
+                            <span>Databases</span>
+                            <span>API Architecture</span>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </section>
 
-        <!-- ===== 4. INTERACTIVE DEVELOPER TERMINAL SECTION ===== -->
+        <!-- ===== 4. SHOPLEDGER — MAIN FEATURED PROJECT & SAAS CASE STUDY ===== -->
+        <section id="shopledger" class="section-container section flagship-section" aria-label="ShopLedger Flagship Project">
+
+            <!-- Flagship Section Header -->
+            <div class="flagship-hero-header reveal">
+                <div class="flagship-badge-row">
+                    <span class="flagship-pill"><span class="star-icon">★</span> FLAGSHIP SAAS PROJECT</span>
+                    <span class="flagship-status-pill"><span class="pulse-emerald"></span> ACTIVE DEVELOPMENT</span>
+                    <span class="flagship-arch-pill">OFFLINE-FIRST ARCHITECTURE</span>
+                </div>
+
+                <h2 class="flagship-main-title">ShopLedger</h2>
+                <p class="flagship-tagline">Smarter Shop Operations & Digital Khata Management for Local Retailers</p>
+
+                <p class="flagship-lead-text">
+                    ShopLedger is a modern web application engineered to bridge the gap between traditional paper bookkeeping
+                    and digital retail efficiency. Designed specifically for neighborhood Kirana stores and independent shopkeepers,
+                    it replaces error-prone physical diaries with an intuitive, high-speed digital ledger, customer credit tracking,
+                    and proactive inventory stock alerts.
+                </p>
+
+                <div class="flagship-cta-group">
+                    <a href="#shopledger-casestudy" class="btn primary-btn flagship-cta">
+                        <span>Read Case Study</span>
+                        <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                        </svg>
+                    </a>
+
+                    <button type="button" class="btn secondary-btn project-modal-trigger" data-project="shopledger" aria-haspopup="dialog" aria-expanded="false">
+                        <span>Project Specifications Modal</span>
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </button>
+
+                    <a href="https://github.com/mukeshdewasi4524-lab" target="_blank" rel="noopener noreferrer" class="btn text-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                        </svg>
+                        <span>GitHub Profile ↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Authentic Verification Notice -->
+            <div class="authentic-notice-banner reveal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <div class="notice-text">
+                    <strong>Project Status & Transparency Notice:</strong>
+                    ShopLedger is under active design and development. The interactive preview below is a high-fidelity CSS/JS concept prototype representing the production UI architecture, data models, and workflow.
+                </div>
+            </div>
+
+            <!-- Interactive High-Fidelity CSS SaaS Preview Dashboard -->
+            <div class="saas-showcase-container reveal" id="saasInteractiveDemo">
+                <div class="saas-window glass-card">
+
+                    <!-- SaaS Window Header Bar -->
+                    <div class="saas-window-bar">
+                        <div class="saas-window-dots" aria-hidden="true">
+                            <span class="saas-dot saas-dot-red"></span>
+                            <span class="saas-dot saas-dot-yellow"></span>
+                            <span class="saas-dot saas-dot-green"></span>
+                        </div>
+                        <div class="saas-window-title">
+                            <span class="saas-app-name">ShopLedger <span class="app-ver">v1.0-preview</span></span>
+                            <span class="saas-store-name">Dewasi General Store · Jodhpur</span>
+                        </div>
+                        <div class="saas-window-status">
+                            <span class="status-indicator-live"></span>
+                            <span>Local Storage Active</span>
+                        </div>
+                    </div>
+
+                    <!-- Interactive SaaS Navigation Tabs -->
+                    <div class="saas-nav-tabs" role="tablist" aria-label="ShopLedger Interactive Dashboard Views">
+                        <button type="button" class="saas-tab-btn active" data-saas-tab="overview" role="tab" aria-selected="true">
+                            <span class="tab-icon">📊</span>
+                            <span>Overview Dashboard</span>
+                        </button>
+                        <button type="button" class="saas-tab-btn" data-saas-tab="udhaar" role="tab" aria-selected="false">
+                            <span class="tab-icon">📖</span>
+                            <span>Udhaar Management (Khata)</span>
+                        </button>
+                        <button type="button" class="saas-tab-btn" data-saas-tab="inventory" role="tab" aria-selected="false">
+                            <span class="tab-icon">📦</span>
+                            <span>Products & Stock</span>
+                        </button>
+                        <button type="button" class="saas-tab-btn" data-saas-tab="ai" role="tab" aria-selected="false">
+                            <span class="tab-icon">✨</span>
+                            <span>Gemini AI Insights</span>
+                        </button>
+                    </div>
+
+                    <!-- SaaS Interactive Panels -->
+                    <div class="saas-panels-body">
+
+                        <!-- Panel 1: Overview Dashboard -->
+                        <div class="saas-panel-content active" id="saas-panel-overview" role="tabpanel">
+                            <!-- 4 KPI Cards -->
+                            <div class="saas-kpi-grid">
+                                <div class="saas-kpi-card">
+                                    <div class="kpi-top">
+                                        <span class="kpi-label">Today's Sales</span>
+                                        <span class="kpi-trend positive">+14% vs yesterday</span>
+                                    </div>
+                                    <div class="kpi-value">₹14,850</div>
+                                    <div class="kpi-sub">28 customer transactions recorded</div>
+                                </div>
+
+                                <div class="saas-kpi-card">
+                                    <div class="kpi-top">
+                                        <span class="kpi-label">Active Udhaar (Credit)</span>
+                                        <span class="kpi-trend warning">14 pending accounts</span>
+                                    </div>
+                                    <div class="kpi-value text-amber">₹8,420</div>
+                                    <div class="kpi-sub">Total credit owed across regular customers</div>
+                                </div>
+
+                                <div class="saas-kpi-card">
+                                    <div class="kpi-top">
+                                        <span class="kpi-label">Inventory Items</span>
+                                        <span class="kpi-trend alert">3 Low Stock Alerts</span>
+                                    </div>
+                                    <div class="kpi-value">412 Items</div>
+                                    <div class="kpi-sub">98% in-stock catalog health</div>
+                                </div>
+
+                                <div class="saas-kpi-card">
+                                    <div class="kpi-top">
+                                        <span class="kpi-label">Registered Customers</span>
+                                        <span class="kpi-trend positive">12 active today</span>
+                                    </div>
+                                    <div class="kpi-value text-lime">148 Total</div>
+                                    <div class="kpi-sub">Digital Khata profiles maintained</div>
+                                </div>
+                            </div>
+
+                            <!-- Two Columns: Recent Feed & Quick Alerts -->
+                            <div class="saas-dual-grid">
+                                <div class="saas-card-sub">
+                                    <div class="sub-header">
+                                        <h4>Recent Store Transactions</h4>
+                                        <span class="badge-mini">Live Feed</span>
+                                    </div>
+                                    <div class="saas-table-wrapper">
+                                        <table class="saas-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Customer</th>
+                                                    <th>Items Purchased</th>
+                                                    <th>Amount</th>
+                                                    <th>Type</th>
+                                                    <th>Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Ramesh Kumar</strong></td>
+                                                    <td>Aashirvaad Atta 5kg, Sugar 1kg</td>
+                                                    <td class="amount-cell">₹350</td>
+                                                    <td><span class="status-badge udhaar-badge">Udhaar Added</span></td>
+                                                    <td>10:45 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Suresh Patel</strong></td>
+                                                    <td>Fortune Mustard Oil 1L, Spices</td>
+                                                    <td class="amount-cell">₹1,200</td>
+                                                    <td><span class="status-badge paid-badge">Cash Paid</span></td>
+                                                    <td>11:15 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Anil Sharma</strong></td>
+                                                    <td>Khata Balance Settlement</td>
+                                                    <td class="amount-cell text-lime">₹500</td>
+                                                    <td><span class="status-badge payment-badge">Payment Received</span></td>
+                                                    <td>12:00 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Pooja Bhati</strong></td>
+                                                    <td>Amul Milk, Bread, Biscuits</td>
+                                                    <td class="amount-cell">₹180</td>
+                                                    <td><span class="status-badge paid-badge">Cash Paid</span></td>
+                                                    <td>12:40 PM</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="saas-card-sub">
+                                    <div class="sub-header">
+                                        <h4>Operational Stock & Credit Alerts</h4>
+                                        <span class="badge-mini text-amber">Attention</span>
+                                    </div>
+                                    <div class="saas-alerts-list">
+                                        <div class="saas-alert-item alert-critical">
+                                            <div class="alert-icon">⚠️</div>
+                                            <div class="alert-info">
+                                                <div class="alert-title">Fortune Mustard Oil (1L)</div>
+                                                <div class="alert-desc">Only <strong>4 units</strong> left in stock (Threshold: 10 units). High sales velocity today.</div>
+                                            </div>
+                                            <button type="button" class="saas-action-chip">Reorder</button>
+                                        </div>
+
+                                        <div class="saas-alert-item alert-warning">
+                                            <div class="alert-icon">📦</div>
+                                            <div class="alert-info">
+                                                <div class="alert-title">Amul Butter (500g)</div>
+                                                <div class="alert-desc">Stock remaining: <strong>2 units</strong>. Delivery due Friday.</div>
+                                            </div>
+                                            <button type="button" class="saas-action-chip">Urgent</button>
+                                        </div>
+
+                                        <div class="saas-alert-item alert-info">
+                                            <div class="alert-icon">🔔</div>
+                                            <div class="alert-info">
+                                                <div class="alert-title">Udhaar Follow-up Notice</div>
+                                                <div class="alert-desc">3 customers have outstanding Khata balances exceeding 7 days (Total: ₹4,170).</div>
+                                            </div>
+                                            <button type="button" class="saas-action-chip" onclick="document.querySelector('[data-saas-tab=\'udhaar\']').click()">Review</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 2: Udhaar Management (Khata) -->
+                        <div class="saas-panel-content" id="saas-panel-udhaar" role="tabpanel">
+                            <div class="khata-top-bar">
+                                <div class="khata-search-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                    </svg>
+                                    <input type="text" class="khata-input" placeholder="Search customer (e.g. Ramesh, Pooja)..." aria-label="Search customer ledger">
+                                </div>
+                                <div class="khata-summary-pill">
+                                    <span>Total Udhaar Outstanding:</span>
+                                    <strong class="text-amber">₹8,420</strong>
+                                </div>
+                            </div>
+
+                            <div class="saas-table-wrapper">
+                                <table class="saas-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Customer Name</th>
+                                            <th>Phone Number</th>
+                                            <th>Current Balance</th>
+                                            <th>Last Activity</th>
+                                            <th>Status</th>
+                                            <th>Quick Ledger Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="customer-profile-cell">
+                                                    <span class="avatar-circle">RK</span>
+                                                    <div>
+                                                        <strong>Ramesh Kumar</strong>
+                                                        <span class="cell-sub">Regular Customer · Ward 4</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>+91 98XXX XXXXX</td>
+                                            <td class="amount-cell text-amber"><strong>₹2,400</strong></td>
+                                            <td>Yesterday (Atta, Sugar)</td>
+                                            <td><span class="status-badge udhaar-badge">Pending</span></td>
+                                            <td>
+                                                <div class="table-btn-group">
+                                                    <button type="button" class="btn-micro" title="Add new credit">+ Udhaar</button>
+                                                    <button type="button" class="btn-micro btn-micro-green" title="Record repayment">- Payment</button>
+                                                    <button type="button" class="btn-micro btn-micro-wa" title="WhatsApp reminder">WhatsApp ↗</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="customer-profile-cell">
+                                                    <span class="avatar-circle">SP</span>
+                                                    <div>
+                                                        <strong>Suresh Patel</strong>
+                                                        <span class="cell-sub">Monthly Account · Main Market</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>+91 97XXX XXXXX</td>
+                                            <td class="amount-cell text-amber"><strong>₹1,150</strong></td>
+                                            <td>3 days ago</td>
+                                            <td><span class="status-badge udhaar-badge">Pending</span></td>
+                                            <td>
+                                                <div class="table-btn-group">
+                                                    <button type="button" class="btn-micro">+ Udhaar</button>
+                                                    <button type="button" class="btn-micro btn-micro-green">- Payment</button>
+                                                    <button type="button" class="btn-micro btn-micro-wa">WhatsApp ↗</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="customer-profile-cell">
+                                                    <span class="avatar-circle">AS</span>
+                                                    <div>
+                                                        <strong>Anil Sharma</strong>
+                                                        <span class="cell-sub">Grocery Khata</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>+91 94XXX XXXXX</td>
+                                            <td class="amount-cell text-amber"><strong>₹620</strong></td>
+                                            <td>Today (₹500 repaid)</td>
+                                            <td><span class="status-badge payment-badge">Partial</span></td>
+                                            <td>
+                                                <div class="table-btn-group">
+                                                    <button type="button" class="btn-micro">+ Udhaar</button>
+                                                    <button type="button" class="btn-micro btn-micro-green">- Payment</button>
+                                                    <button type="button" class="btn-micro btn-micro-wa">WhatsApp ↗</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="customer-profile-cell">
+                                                    <span class="avatar-circle">VS</span>
+                                                    <div>
+                                                        <strong>Vikram Singh</strong>
+                                                        <span class="cell-sub">Settled Account</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>+91 91XXX XXXXX</td>
+                                            <td class="amount-cell text-lime"><strong>₹0</strong></td>
+                                            <td>Full settlement today</td>
+                                            <td><span class="status-badge paid-badge">All Clear</span></td>
+                                            <td>
+                                                <div class="table-btn-group">
+                                                    <button type="button" class="btn-micro">+ New Udhaar</button>
+                                                    <span class="text-muted" style="font-size:12px; margin-left:6px;">No balance</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Panel 3: Products & Stock -->
+                        <div class="saas-panel-content" id="saas-panel-inventory" role="tabpanel">
+                            <div class="khata-top-bar">
+                                <div class="inventory-tags">
+                                    <span class="inv-filter-chip active">All Products (412)</span>
+                                    <span class="inv-filter-chip">Grocery & Staples (184)</span>
+                                    <span class="inv-filter-chip">Oils & Ghee (42)</span>
+                                    <span class="inv-filter-chip alert-chip">Low Stock Alerts (3)</span>
+                                </div>
+                            </div>
+
+                            <div class="saas-table-wrapper">
+                                <table class="saas-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Product Name</th>
+                                            <th>Category</th>
+                                            <th>Cost Price</th>
+                                            <th>Selling Price</th>
+                                            <th>In Stock</th>
+                                            <th>Stock Health</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Aashirvaad Superior MP Atta (5kg)</strong></td>
+                                            <td>Flour & Grains</td>
+                                            <td>₹215</td>
+                                            <td class="amount-cell">₹240</td>
+                                            <td><strong>24 Units</strong></td>
+                                            <td><span class="status-badge paid-badge">Healthy Stock</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Fortune Kachi Ghani Mustard Oil (1L)</strong></td>
+                                            <td>Edible Oils</td>
+                                            <td>₹135</td>
+                                            <td class="amount-cell">₹152</td>
+                                            <td class="text-amber"><strong>4 Units</strong></td>
+                                            <td><span class="status-badge udhaar-badge">Low Stock Alert</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tata Salt Vacuum Evaporated (1kg)</strong></td>
+                                            <td>Spices & Salt</td>
+                                            <td>₹22</td>
+                                            <td class="amount-cell">₹28</td>
+                                            <td><strong>45 Units</strong></td>
+                                            <td><span class="status-badge paid-badge">Healthy Stock</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Amul Pasteurised Butter (500g)</strong></td>
+                                            <td>Dairy Products</td>
+                                            <td>₹245</td>
+                                            <td class="amount-cell">₹275</td>
+                                            <td class="text-amber"><strong>2 Units</strong></td>
+                                            <td><span class="status-badge udhaar-badge">Critical Low</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Panel 4: Gemini AI Assistant Concept -->
+                        <div class="saas-panel-content" id="saas-panel-ai" role="tabpanel">
+                            <div class="saas-ai-container">
+                                <div class="ai-header-bar">
+                                    <div class="ai-title-wrap">
+                                        <span class="sparkle-icon">✨</span>
+                                        <div>
+                                            <h4>Gemini AI Shop Assistant</h4>
+                                            <p>Intelligent cashflow synthesis & retail operations insights</p>
+                                        </div>
+                                    </div>
+                                    <span class="status-badge ai-badge">Planned API Integration</span>
+                                </div>
+
+                                <div class="ai-query-card">
+                                    <div class="query-prompt">
+                                        <span class="user-avatar-mini">👤</span>
+                                        <div class="query-bubble">
+                                            <strong>Shopkeeper:</strong> "Summarize today's financial performance, pending Udhaar, and what I should reorder tonight."
+                                        </div>
+                                    </div>
+
+                                    <div class="ai-response-card">
+                                        <div class="ai-avatar-mini">✨</div>
+                                        <div class="response-body">
+                                            <h5>Gemini Daily Operations Digest</h5>
+                                            <p>
+                                                <strong>1. Sales & Cashflow:</strong> Today's total sales reached <strong>₹14,850</strong> across 28 transactions, reflecting a <strong>+14% increase</strong> compared to yesterday. Cash collected stands at <strong>₹11,350</strong>.
+                                            </p>
+                                            <p>
+                                                <strong>2. Khata (Udhaar) Insights:</strong> New credit issued today totaled <strong>₹3,500</strong>, while <strong>₹500</strong> in credit was recovered from Anil Sharma. There are 3 customer accounts with pending balances older than 7 days totaling <strong>₹4,170</strong>. Recommended action: send a friendly WhatsApp reminder.
+                                            </p>
+                                            <p>
+                                                <strong>3. Immediate Stock Alerts:</strong> <strong>Fortune Mustard Oil (1L)</strong> is down to 4 units with an average daily sales rate of 5 units. It is predicted to stock out by tomorrow afternoon. Reorder recommendation: 24 units.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== DETAILED SAAS CASE STUDY SECTION ===== -->
+            <div class="case-study-container reveal" id="shopledger-casestudy">
+
+                <div class="case-study-heading">
+                    <p class="section-label">FLAGSHIP PRODUCT CASE STUDY</p>
+                    <h3>ShopLedger: Product Engineering & Architecture</h3>
+                    <p class="case-study-sub">An authentic breakdown of the problem space, architectural design, core modules, tech stack, and technical learnings.</p>
+                </div>
+
+                <!-- Case Study Sub-navigation -->
+                <nav class="case-study-nav" aria-label="Case Study Table of Contents">
+                    <a href="#cs-overview" class="cs-nav-pill">A. Overview</a>
+                    <a href="#cs-problem" class="cs-nav-pill">B. Problem Space</a>
+                    <a href="#cs-solution" class="cs-nav-pill">C. The Solution</a>
+                    <a href="#cs-features" class="cs-nav-pill">D. Core Modules</a>
+                    <a href="#cs-stack" class="cs-nav-pill">E. Tech Stack</a>
+                    <a href="#cs-process" class="cs-nav-pill">F. Development</a>
+                    <a href="#cs-contribution" class="cs-nav-pill">G. Contribution</a>
+                    <a href="#cs-learnings" class="cs-nav-pill">H. Learnings</a>
+                </nav>
+
+                <div class="case-study-grid">
+
+                    <!-- Section A: Project Overview -->
+                    <article class="cs-card glass-card" id="cs-overview">
+                        <div class="cs-card-header">
+                            <span class="cs-number">A</span>
+                            <h4>Project Overview</h4>
+                        </div>
+                        <p>
+                            <strong>What is ShopLedger?</strong> ShopLedger is an intuitive, web-based shop management and digital Khata
+                            (credit ledger) application designed specifically for neighborhood grocery stores, independent merchants, and small retail outlets.
+                        </p>
+                        <p>
+                            <strong>Who is it designed for?</strong> Small business owners who operate primarily with local recurring customers,
+                            frequently offering short-term credit (Udhaar) while managing hundreds of fast-moving consumer items.
+                        </p>
+                        <p>
+                            <strong>Why is it useful?</strong> Traditional enterprise ERP solutions are too complex, expensive, and clunky for single-counter
+                            neighborhood shops. ShopLedger eliminates operational friction by focusing entirely on three core pillars: speed of transaction,
+                            transparent customer credit reconciliation, and zero-headache inventory monitoring.
+                        </p>
+                    </article>
+
+                    <!-- Section B: The Problem -->
+                    <article class="cs-card glass-card" id="cs-problem">
+                        <div class="cs-card-header">
+                            <span class="cs-number">B</span>
+                            <h4>The Problem Space in Local Retail</h4>
+                        </div>
+                        <p>Small shopkeepers face persistent daily operational bottlenecks caused by manual paper diaries and disconnected bookkeeping:</p>
+                        <div class="cs-feature-list">
+                            <div class="cs-item">
+                                <strong>1. Udhaar & Khata Reconciliation Disputes:</strong> Paper ledgers suffer from worn pages, illegible handwritten entries, and accidental calculation mistakes, creating customer tension when settling monthly dues.
+                            </div>
+                            <div class="cs-item">
+                                <strong>2. Manual Inventory Guesswork:</strong> Shopkeepers often discover high-margin items are out of stock only when a customer is standing at the counter ready to purchase.
+                            </div>
+                            <div class="cs-item">
+                                <strong>3. Obscure Daily Net Profit:</strong> Due to mixing cash and credit transactions throughout the day, merchants struggle to understand their true daily revenue versus outstanding unpaid debt.
+                            </div>
+                            <div class="cs-item">
+                                <strong>4. Absent Customer Retention:</strong> Local stores lack simple mechanisms to re-engage lapsed customers or send timely, polite payment reminders.
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Section C: The Solution -->
+                    <article class="cs-card glass-card" id="cs-solution">
+                        <div class="cs-card-header">
+                            <span class="cs-number">C</span>
+                            <h4>The ShopLedger Solution</h4>
+                        </div>
+                        <p>
+                            ShopLedger transforms traditional shopkeeping into a digital-first, friction-free experience:
+                        </p>
+                        <div class="cs-feature-list">
+                            <div class="cs-item">
+                                <strong>• Instant Customer Credit Lookup:</strong> Retrieve any customer's running ledger, past receipts, and net balance in less than 2 seconds.
+                            </div>
+                            <div class="cs-item">
+                                <strong>• Automated Running Balances:</strong> Every transaction automatically recalculates outstanding dues, generating clear timestamped audit trails.
+                            </div>
+                            <div class="cs-item">
+                                <strong>• Proactive Stockout Alerts:</strong> Low stock thresholds visually notify the merchant before essential goods run dry.
+                            </div>
+                            <div class="cs-item">
+                                <strong>• Single-Hand Mobile Ergonomics:</strong> Built with high contrast, large touch targets, and minimal data-entry clicks for busy checkout counters.
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Section D: Core Features & Implementation Status -->
+                    <article class="cs-card glass-card" id="cs-features">
+                        <div class="cs-card-header">
+                            <span class="cs-number">D</span>
+                            <h4>Core Features & Implementation Status</h4>
+                        </div>
+                        <p class="cs-note">Features are categorized by their implementation status to ensure complete authenticity:</p>
+                        <div class="status-modules-grid">
+                            <div class="module-item">
+                                <div class="mod-top">
+                                    <h5>1. Overview Dashboard</h5>
+                                    <span class="status-badge paid-badge">Implemented</span>
+                                </div>
+                                <p>Real-time KPI metric cards (Daily sales, total active Udhaar, low-stock alerts, customer count) and quick-action transaction triggers.</p>
+                            </div>
+
+                            <div class="module-item">
+                                <div class="mod-top">
+                                    <h5>2. Customer Management & Khata</h5>
+                                    <span class="status-badge paid-badge">Implemented</span>
+                                </div>
+                                <p>Searchable customer profiles, running debit/credit ledger, transaction history, and settlement logging.</p>
+                            </div>
+
+                            <div class="module-item">
+                                <div class="mod-top">
+                                    <h5>3. Udhaar Management</h5>
+                                    <span class="status-badge paid-badge">Implemented</span>
+                                </div>
+                                <p>Balance computation models, overdue credit flags, and one-click WhatsApp reminder formatting.</p>
+                            </div>
+
+                            <div class="module-item">
+                                <div class="mod-top">
+                                    <h5>4. Products & Stock Inventory</h5>
+                                    <span class="status-badge udhaar-badge">Core Logic Ready</span>
+                                </div>
+                                <p>Item catalog, purchase & selling price tracking, category organization, and low stock threshold alerts.</p>
+                            </div>
+
+                            <div class="module-item">
+                                <div class="mod-top">
+                                    <h5>5. Sales & Quick Billing</h5>
+                                    <span class="status-badge udhaar-badge">Core Logic Ready</span>
+                                </div>
+                                <p>Fast multi-item checkout, cash vs credit tagging, and digital invoice slip generation.</p>
+                            </div>
+
+                            <div class="module-item">
+                                <div class="mod-top">
+                                    <h5>6. Expenses & Overhead Tracking</h5>
+                                    <span class="status-badge in-progress-badge">In Development</span>
+                                </div>
+                                <p>Operational shop expenditure tracking (electricity bills, supplier payments, store maintenance).</p>
+                            </div>
+
+                            <div class="module-item">
+                                <div class="mod-top">
+                                    <h5>7. Retention Centre</h5>
+                                    <span class="status-badge in-progress-badge">In Development</span>
+                                </div>
+                                <p>Customer visit frequency monitoring, identifying inactive regular accounts, and loyalty incentives.</p>
+                            </div>
+
+                            <div class="module-item">
+                                <div class="mod-top">
+                                    <h5>8. Reports & Cashflow Analytics</h5>
+                                    <span class="status-badge in-progress-badge">In Development</span>
+                                </div>
+                                <p>Daily closing summaries, monthly credit recovery rates, and top-selling item analytics.</p>
+                            </div>
+
+                            <div class="module-item">
+                                <div class="mod-top">
+                                    <h5>9. Gemini AI Integration</h5>
+                                    <span class="status-badge ai-badge">Planned Roadmap</span>
+                                </div>
+                                <p>Google Gemini API integration to enable conversational ledger queries, automated daily cashflow audio digests, and predictive inventory reorder alerts.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Section E: Technology Stack -->
+                    <article class="cs-card glass-card" id="cs-stack">
+                        <div class="cs-card-header">
+                            <span class="cs-number">E</span>
+                            <h4>Verified Technology Stack</h4>
+                        </div>
+                        <div class="tech-stack-cards-grid">
+                            <div class="stack-card">
+                                <span class="stack-role">Frontend Core</span>
+                                <h5>React 19 & Vite</h5>
+                                <p>Component-driven UI architecture delivering ultra-fast hot module replacement (HMR) and optimized client-side bundles.</p>
+                            </div>
+                            <div class="stack-card">
+                                <span class="stack-role">Language & State</span>
+                                <h5>JavaScript (ES6+)</h5>
+                                <p>Modern functional JavaScript, array reducers for financial balance computation, and clean state container structures.</p>
+                            </div>
+                            <div class="stack-card">
+                                <span class="stack-role">Styling & Layout</span>
+                                <h5>Modern CSS3</h5>
+                                <p>CSS Grid, Flexbox, custom properties (CSS variables), and glassmorphism designed for high readability in retail lighting.</p>
+                            </div>
+                            <div class="stack-card">
+                                <span class="stack-role">Persistence (Offline-First)</span>
+                                <h5>Client-Side localStorage</h5>
+                                <p>Zero-latency offline persistence ensuring store records remain saved locally on the device even during network dropouts.</p>
+                            </div>
+                            <div class="stack-card">
+                                <span class="stack-role">Backend Roadmap</span>
+                                <h5>Express.js & REST API</h5>
+                                <p>Planned lightweight backend to support multi-device store syncing and cloud backups.</p>
+                            </div>
+                            <div class="stack-card">
+                                <span class="stack-role">Intelligent Services</span>
+                                <h5>Google Gemini API</h5>
+                                <p>Planned generative AI integration for plain-language financial digests and automated restocking insights.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Section F: Development Process -->
+                    <article class="cs-card glass-card" id="cs-process">
+                        <div class="cs-card-header">
+                            <span class="cs-number">F</span>
+                            <h4>Development & Architecture Process</h4>
+                        </div>
+                        <div class="process-steps-list">
+                            <div class="process-step">
+                                <span class="step-num">01</span>
+                                <div>
+                                    <h5>Problem Discovery & Domain Mapping</h5>
+                                    <p>Observed real-world daily friction at local retail counters, analyzing how merchants write in physical Khata books and the errors that emerge during month-end settlements.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-num">02</span>
+                                <div>
+                                    <h5>Data Model & Ledger Architecture</h5>
+                                    <p>Designed core data schemas for Customers (ID, name, phone, balance), Transactions (debit, credit, items, timestamp), and Products (SKU, title, stock, threshold).</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-num">03</span>
+                                <div>
+                                    <h5>UI/UX Wireframing & Accessibility</h5>
+                                    <p>Crafted high-contrast layouts prioritizing single-click interactions, large numeric inputs, and visual color cues (emerald for paid, amber for credit owed).</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-num">04</span>
+                                <div>
+                                    <h5>Component Implementation & State</h5>
+                                    <p>Built modular UI components for the Overview Dashboard, Customer Khata Cards, and Product Rows with local storage persistence.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-num">05</span>
+                                <div>
+                                    <h5>AI Integration Planning</h5>
+                                    <p>Formulated prompts and structured JSON response schemas for the planned Google Gemini API integration to turn raw transaction numbers into conversational advice.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Section G: My Contribution -->
+                    <article class="cs-card glass-card" id="cs-contribution">
+                        <div class="cs-card-header">
+                            <span class="cs-number">G</span>
+                            <h4>My Authentic Contribution</h4>
+                        </div>
+                        <p>
+                            I conceived, designed, and developed ShopLedger as an independent student developer:
+                        </p>
+                        <div class="cs-feature-list">
+                            <div class="cs-item">
+                                <strong>• Full UI/UX Design:</strong> Crafted the entire visual interface, color system, typography hierarchy, and interactive states from scratch.
+                            </div>
+                            <div class="cs-item">
+                                <strong>• Architectural Logic:</strong> Structured the credit/debit calculation algorithms, transaction ledger pipelines, and local data persistence models.
+                            </div>
+                            <div class="cs-item">
+                                <strong>• Product Vision:</strong> Defined all product requirements, feature roadmaps, and prioritized modules solving real retail operational challenges.
+                            </div>
+                            <div class="cs-item">
+                                <strong>• Integrity Note:</strong> No fake team members, fabricated revenues, or exaggerated active user counts are claimed. This project represents deliberate, self-driven learning and practical engineering.
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Section H: Challenges & Technical Learnings -->
+                    <article class="cs-card glass-card" id="cs-learnings">
+                        <div class="cs-card-header">
+                            <span class="cs-number">H</span>
+                            <h4>Technical Challenges & Learnings</h4>
+                        </div>
+                        <div class="cs-feature-list">
+                            <div class="cs-item">
+                                <strong>1. Currency & Ledger Arithmetic Precision:</strong> Managing running balances across frequent debit and credit events reinforced the importance of pure functions and strict numerical validation to prevent balance drift.
+                            </div>
+                            <div class="cs-item">
+                                <strong>2. Designing for Non-Technical Users:</strong> A counter shopkeeper does not have time to navigate multi-level menus. Simplifying workflows to 1–2 clicks proved to be the most challenging and rewarding design exercise.
+                            </div>
+                            <div class="cs-item">
+                                <strong>3. Offline-First Resilience:</strong> Exploring client-side persistence with `localStorage` taught me how crucial it is to design applications that remain completely functional even when the internet drops.
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ===== 5. SKILLS SECTION ===== -->
+        <section id="skills" class="section-container section" aria-label="Technical Skills">
+
+            <div class="section-heading reveal">
+                <p class="section-label">WHAT I WORK WITH</p>
+                <h2>Technical <span>Skills</span></h2>
+                <p>Programming languages, core web technologies, and developer tools I practice every day.</p>
+            </div>
+
+            <!-- Skills Category Filter Tabs -->
+            <div class="skills-filters reveal" role="tablist" aria-label="Filter skills by category">
+                <button type="button" class="skill-filter-btn active" data-skill-filter="all" role="tab" aria-selected="true">
+                    <span>All Technologies</span> <span class="filter-count">7</span>
+                </button>
+                <button type="button" class="skill-filter-btn" data-skill-filter="programming" role="tab" aria-selected="false">
+                    <span>Programming</span> <span class="filter-count">1</span>
+                </button>
+                <button type="button" class="skill-filter-btn" data-skill-filter="frontend" role="tab" aria-selected="false">
+                    <span>Frontend</span> <span class="filter-count">3</span>
+                </button>
+                <button type="button" class="skill-filter-btn" data-skill-filter="tools" role="tab" aria-selected="false">
+                    <span>Tools</span> <span class="filter-count">3</span>
+                </button>
+            </div>
+
+            <!-- Category Group 1: Core Programming -->
+            <div class="skills-category-wrapper reveal" data-category="programming">
+                <div class="category-title-bar">
+                    <span class="cat-pill">01 / PROGRAMMING</span>
+                    <h3>Core Programming Language</h3>
+                </div>
+
+                <div class="skills-grid-clean">
+                    <article class="skill-card-clean glass-card">
+                        <div class="skill-clean-header">
+                            <div class="skill-clean-icon python-icon-clean" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M11.91 2c-5.04 0-4.73 2.18-4.73 2.18l.01 2.27h4.81v.68H5.21S2 6.78 2 11.88c0 5.1 2.8 4.93 2.8 4.93h1.67v-2.35s-.09-2.8 2.76-2.8h4.74s2.68.04 2.68-2.61V4.65S17.06 2 11.91 2zM9.5 3.65a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8zm2.59 18.35c5.04 0 4.73-2.18 4.73-2.18l-.01-2.27h-4.81v-.68h6.79s3.21.35 3.21-4.75c0-5.1-2.8-4.93-2.8-4.93h-1.67v2.35s.09 2.8-2.76 2.8H9.99s-2.68-.04-2.68 2.61v4.4s-.41 2.65 4.78 2.65zm2.41-1.65a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8z"/>
+                                </svg>
+                            </div>
+                            <span class="skill-badge-mini">General Purpose</span>
+                        </div>
+                        <h4>Python</h4>
+                        <p>Core programming fundamentals, syntax, control structures, list comprehension, functions, logic building, data structures, and CLI utilities.</p>
+                        <div class="skill-tag-row">
+                            <span>Python 3</span>
+                            <span>Logic Building</span>
+                            <span>Data Structures</span>
+                            <span>Automation Scripts</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Category Group 2: Web & Frontend -->
+            <div class="skills-category-wrapper reveal" data-category="frontend">
+                <div class="category-title-bar">
+                    <span class="cat-pill">02 / WEB & FRONTEND</span>
+                    <h3>Core Web Technologies</h3>
+                </div>
+
+                <div class="skills-grid-clean">
+                    <article class="skill-card-clean glass-card">
+                        <div class="skill-clean-header">
+                            <div class="skill-clean-icon html-icon-clean" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L4 4.5l1.2 13.5L12 22l6.8-4L20 4.5 12 2zm5.3 5.3l-.3 3.5h-5v2.2h4.8l-.5 4.5-4.3 1.2-4.3-1.2-.3-2.8h2.3l.1 1.2 2.2.6 2.2-.6.2-2.1H7.8l-.4-4.2h10.2l-.3-2.1H7.5l-.2-2.1h10.2l-.2 2z"/>
+                                </svg>
+                            </div>
+                            <span class="skill-badge-mini">Markup</span>
+                        </div>
+                        <h4>HTML5</h4>
+                        <p>Semantic document structures, accessible landmark tags (`header`, `main`, `section`, `article`), OpenGraph metadata, and SEO best practices.</p>
+                        <div class="skill-tag-row">
+                            <span>Semantic Markup</span>
+                            <span>Web Accessibility (a11y)</span>
+                            <span>SEO Metadata</span>
+                            <span>Forms & Validation</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card-clean glass-card">
+                        <div class="skill-clean-header">
+                            <div class="skill-clean-icon css-icon-clean" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L4 4.5l1.2 13.5L12 22l6.8-4L20 4.5 12 2zm5.1 6.5l-.2 2.2H8.7l.2 2.1h8l-.5 5.5-4.4 1.2-4.4-1.2-.3-3.2h2.2l.1 1.6 2.4.6 2.4-.6.3-2.7H7.4l-.5-5.5h10.4l-.2-2.2H6.7l-.2-2.1h14.1l-.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <span class="skill-badge-mini">Styling</span>
+                        </div>
+                        <h4>CSS3</h4>
+                        <p>Modern responsive layouts using CSS Flexbox and CSS Grid, custom properties (CSS variables), glassmorphism design, and fluid typography.</p>
+                        <div class="skill-tag-row">
+                            <span>CSS Grid & Flexbox</span>
+                            <span>Custom Properties</span>
+                            <span>Glassmorphism</span>
+                            <span>Mobile Breakpoints</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card-clean glass-card">
+                        <div class="skill-clean-header">
+                            <div class="skill-clean-icon js-icon-clean" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M3 3h18v18H3V3zm14.8 13.3c-.5-.8-1.2-1.3-2.1-1.3-.9 0-1.4.5-1.4 1.1 0 .8.6 1.1 1.8 1.6 1.7.7 2.6 1.5 2.6 3.1 0 1.8-1.4 3-3.5 3-2 0-3.3-1-3.7-2.3l1.8-1.1c.3.7.8 1.3 1.9 1.3 1 0 1.6-.5 1.6-1.2 0-.8-.7-1.1-1.9-1.6-1.6-.7-2.5-1.4-2.5-3 0-1.6 1.3-2.9 3.2-2.9 1.6 0 2.8.7 3.4 1.9l-1.6 1.4zm-7.6-3.8h2.2v6.6c0 1.9-.9 2.8-2.6 2.8-1.5 0-2.4-.7-2.8-1.7l1.8-1.1c.3.5.6.8 1.1.8.6 0 .9-.4.9-1.2v-6.2z"/>
+                                </svg>
+                            </div>
+                            <span class="skill-badge-mini">Interactivity</span>
+                        </div>
+                        <h4>JavaScript (ES6+)</h4>
+                        <p>Dynamic client-side interactivity, DOM manipulation, asynchronous programming (Fetch API, Promises), array methods, and state containers.</p>
+                        <div class="skill-tag-row">
+                            <span>ES6+ Syntax</span>
+                            <span>DOM Manipulation</span>
+                            <span>REST API Fetch</span>
+                            <span>Event Architecture</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Category Group 3: Tools & Workflow -->
+            <div class="skills-category-wrapper reveal" data-category="tools">
+                <div class="category-title-bar">
+                    <span class="cat-pill">03 / TOOLS & WORKFLOW</span>
+                    <h3>Tools & Development Environment</h3>
+                </div>
+
+                <div class="skills-grid-clean">
+                    <article class="skill-card-clean glass-card">
+                        <div class="skill-clean-header">
+                            <div class="skill-clean-icon tool-icon-clean" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M21.62 11.12l-8.74-8.74a1.24 1.24 0 0 0-1.76 0L9.36 4.14l2.22 2.22c.54-.18 1.17-.06 1.6.38.45.45.56 1.1.34 1.65l2.14 2.14c.55-.22 1.2-.11 1.65.34.62.62.62 1.62 0 2.24s-1.62.62-2.24 0a1.59 1.59 0 0 1-.34-1.65L12.63 9.32v5.43c.18.09.35.22.48.36.62.62.62 1.62 0 2.24s-1.62.62-2.24 0-1.62-1.62 0-2.24c.14-.14.3-.26.48-.36V9.28a1.6 1.6 0 0 1-.86-.46L8.27 6.6 2.38 12.49a1.24 1.24 0 0 0 0 1.76l8.74 8.74c.49.49 1.27.49 1.76 0l8.74-8.74c.49-.49.49-1.28 0-1.76z"/>
+                                </svg>
+                            </div>
+                            <span class="skill-badge-mini">Version Control</span>
+                        </div>
+                        <h4>Git</h4>
+                        <p>Distributed version control system, commit hygiene, local history inspection, branch creation, merging, conflict resolution, and repository tracking.</p>
+                        <div class="skill-tag-row">
+                            <span>Git CLI</span>
+                            <span>Branch Workflows</span>
+                            <span>Commit Hygiene</span>
+                            <span>Local Tracking</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card-clean glass-card">
+                        <div class="skill-clean-header">
+                            <div class="skill-clean-icon tool-icon-clean" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                                </svg>
+                            </div>
+                            <span class="skill-badge-mini">Code Hosting</span>
+                        </div>
+                        <h4>GitHub</h4>
+                        <p>Remote code hosting, public open-source repository management (@mukeshdewasi4524-lab), README documentation, and GitHub Pages continuous deployment.</p>
+                        <div class="skill-tag-row">
+                            <span>GitHub Pages</span>
+                            <span>Public Repos</span>
+                            <span>Open Source</span>
+                            <span>Remote Sync</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card-clean glass-card">
+                        <div class="skill-clean-header">
+                            <div class="skill-clean-icon tool-icon-clean" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.58 2.22c-.35-.16-.76-.11-1.07.13L8.6 8.52 4.41 5.34a.996.996 0 0 0-1.22.04l-2.07 1.8a1 1 0 0 0 0 1.52L4.54 12 .92 15.1a1 1 0 0 0 0 1.52l2.07 1.8c.36.31.88.33 1.25.04l4.36-3.38 7.91 6.17c.3.24.72.29 1.07.13.36-.16.59-.51.59-.9V3.12c0-.39-.23-.74-.59-.9zM16 18.65l-6-4.67 6-4.67v9.34z"/>
+                                </svg>
+                            </div>
+                            <span class="skill-badge-mini">Primary IDE</span>
+                        </div>
+                        <h4>VS Code</h4>
+                        <p>Primary code editor configured for productivity: syntax themes, Python & Prettier extensions, integrated Bash terminal, Emmet expansions, and fast debugging.</p>
+                        <div class="skill-tag-row">
+                            <span>VS Code IDE</span>
+                            <span>Integrated CLI</span>
+                            <span>Syntax Extensions</span>
+                            <span>Fast Debugging</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ===== 6. INTERACTIVE DEVELOPER TERMINAL SECTION ===== -->
         <section id="terminal" class="section-container section" aria-label="Interactive Developer Terminal">
 
             <div class="section-heading reveal">
@@ -563,7 +1542,7 @@
                             </p>
                             <p class="term-intro-text">
                                 Welcome to Mukesh Dewasi's developer terminal v2.0.<br>
-                                Type <span class="term-highlight">'help'</span> to see available commands or click quick action chips below.
+                                Type <span class="term-highlight">'help'</span> or <span class="term-highlight">'shopledger'</span> to explore, or click quick action chips below.
                             </p>
                         </div>
 
@@ -591,9 +1570,11 @@
                     <div class="terminal-quick-chips" aria-label="Suggested terminal commands">
                         <span class="quick-chips-label">Quick run:</span>
                         <button type="button" class="term-chip" data-cmd="help">help</button>
+                        <button type="button" class="term-chip" data-cmd="whoami">whoami</button>
                         <button type="button" class="term-chip" data-cmd="about">about</button>
                         <button type="button" class="term-chip" data-cmd="skills">skills</button>
                         <button type="button" class="term-chip" data-cmd="projects">projects</button>
+                        <button type="button" class="term-chip flagship-term-chip" data-cmd="shopledger">★ shopledger</button>
                         <button type="button" class="term-chip" data-cmd="github">github</button>
                         <button type="button" class="term-chip" data-cmd="linkedin">linkedin</button>
                         <button type="button" class="term-chip" data-cmd="contact">contact</button>
@@ -604,13 +1585,13 @@
 
         </section>
 
-        <!-- ===== 5. ADVANCED PROJECTS SHOWCASE ===== -->
+        <!-- ===== 7. ADVANCED PROJECTS SHOWCASE ===== -->
         <section id="projects" class="section-container section" aria-label="Featured Projects">
 
             <div class="section-heading reveal">
                 <p class="section-label">MY CREATIONS</p>
                 <h2>Featured <span>Projects</span></h2>
-                <p>Some of my work and experiments with technology.</p>
+                <p>Authentic software projects and digital applications I have engineered.</p>
             </div>
 
             <!-- Project Category Filter Pills -->
@@ -618,19 +1599,19 @@
                 <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
                     <span>All Projects</span> <span class="filter-count">3</span>
                 </button>
+                <button type="button" class="filter-btn" data-filter="webapp" role="tab" aria-selected="false">
+                    <span>SaaS / Web App</span> <span class="filter-count">1</span>
+                </button>
                 <button type="button" class="filter-btn" data-filter="frontend" role="tab" aria-selected="false">
                     <span>Frontend</span> <span class="filter-count">2</span>
-                </button>
-                <button type="button" class="filter-btn" data-filter="webapp" role="tab" aria-selected="false">
-                    <span>Web App</span> <span class="filter-count">1</span>
                 </button>
             </div>
 
             <!-- Projects Grid -->
             <div class="projects-grid" id="projectsGrid">
 
-                <!-- Project 1: ShopLedger -->
-                <article class="project-card glass-card reveal" data-category="webapp" data-project-id="shopledger">
+                <!-- Project 1: ShopLedger (FLAGSHIP) -->
+                <article class="project-card glass-card reveal flagship-project-card" data-category="webapp" data-project-id="shopledger">
                     <div class="project-preview preview-two">
                         <div class="preview-symbol">S<span>.</span></div>
                         <h3>ShopLedger</h3>
@@ -638,12 +1619,12 @@
                         <div class="preview-lines" aria-hidden="true">
                             <span></span><span></span><span></span>
                         </div>
-                        <div class="preview-tag-concept">Retail & Accounting Concept</div>
+                        <div class="preview-tag-concept">★ Flagship SaaS Case Study</div>
                     </div>
 
                     <div class="project-details">
                         <div class="project-meta">
-                            <span class="project-category">01 / WEB APP</span>
+                            <span class="project-category">01 / FLAGSHIP SAAS</span>
                             <span class="project-status progress-status">
                                 <span class="status-pulse-amber"></span> IN PROGRESS
                             </span>
@@ -652,40 +1633,34 @@
                         <h3>ShopLedger</h3>
 
                         <p>
-                            A shop management project concept focused on making everyday business tasks,
-                            customer ledger records (khata), and inventory tracking simpler for local store owners.
+                            A modern shop management and digital Khata application designed to simplify everyday business operations,
+                            customer credit records, and inventory tracking for local store owners.
                         </p>
 
                         <div class="tech-tags">
                             <span>React</span>
                             <span>JavaScript</span>
                             <span>UI/UX Design</span>
-                            <span>AI Concept</span>
+                            <span>localStorage</span>
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="project-card-actions">
-                            <button type="button"
-                                    class="btn primary-btn project-btn project-modal-trigger"
-                                    data-project="shopledger"
-                                    aria-haspopup="dialog"
-                                    aria-expanded="false">
-                                <span>Preview Concept</span>
+                            <a href="#shopledger" class="btn primary-btn project-btn">
+                                <span>Explore Flagship</span>
                                 <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <line x1="7" y1="17" x2="17" y2="7"></line>
                                     <polyline points="7 7 17 7 17 17"></polyline>
                                 </svg>
-                            </button>
-
-                            <a href="https://github.com/mukeshdewasi4524-lab"
-                               class="btn secondary-btn project-btn"
-                               target="_blank" rel="noopener noreferrer"
-                               aria-label="View ShopLedger repository on GitHub (opens in new tab)">
-                                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
-                                </svg>
-                                <span>GitHub</span>
                             </a>
+
+                            <button type="button"
+                                    class="btn secondary-btn project-btn project-modal-trigger"
+                                    data-project="shopledger"
+                                    aria-haspopup="dialog"
+                                    aria-expanded="false">
+                                <span>Quick Specs</span>
+                            </button>
                         </div>
                     </div>
                 </article>
@@ -725,7 +1700,7 @@
                             <span>HTML5</span>
                             <span>CSS3</span>
                             <span>JavaScript</span>
-                            <span>Responsive</span>
+                            <span>GitHub Pages</span>
                         </div>
 
                         <!-- Action Buttons -->
@@ -822,7 +1797,7 @@
             </div>
         </section>
 
-        <!-- ===== 6. GITHUB PUBLIC API INTEGRATION SECTION ===== -->
+        <!-- ===== 8. GITHUB PUBLIC API INTEGRATION SECTION ===== -->
         <section id="github" class="section-container section" aria-label="GitHub Repositories and Open Source">
 
             <div class="section-heading reveal">
@@ -887,7 +1862,7 @@
 
         </section>
 
-        <!-- ===== 7. SMART CONTACT SECTION ===== -->
+        <!-- ===== 9. SMART CONTACT SECTION ===== -->
         <section id="contact" class="section-container section" aria-label="Contact Mukesh Dewasi">
 
             <div class="section-heading reveal">
@@ -945,7 +1920,7 @@
                             <div class="contact-item-icon" aria-hidden="true">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
-                                </svg>
+                        </svg>
                             </div>
                             <div class="contact-item-info">
                                 <span class="label">GitHub Profile</span>
@@ -959,7 +1934,6 @@
                         </div>
                     </div>
 
-                    <!-- Verified Social Channels -->
                     <div class="contact-social-pills">
                         <a href="https://www.linkedin.com/in/mukesh-d-a83ba8397"
                            target="_blank" rel="noopener noreferrer"
@@ -978,7 +1952,7 @@
                            aria-label="Follow on GitHub (opens in new tab)">
                             <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
-                            </svg>
+                        </svg>
                             <span>GitHub</span>
                             <span class="arrow">↗</span>
                         </a>
@@ -1100,15 +2074,17 @@
                             <span class="btn-spinner" aria-hidden="true"></span>
                         </button>
 
-                        <p class="form-disclaimer">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                            Direct client-side routing. No tracking or third-party cookies.
+                        <p class="form-privacy-note">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span>Client-side validated. Connect directly via LinkedIn for instant direct delivery.</span>
                         </p>
                     </form>
                 </div>
 
             </div>
-
         </section>
 
     </main>
@@ -1121,15 +2097,21 @@
                     <span class="logo-text">Mukesh</span><span class="logo-accent">.dev</span>
                 </a>
                 <p class="footer-tagline">
-                    Student Developer & first-year college student turning ideas into real-world software experiences.
+                    Student Developer & Creator of ShopLedger.
+                    Focused on building accessible software with Python, HTML, CSS & vanilla JavaScript.
                 </p>
+                <div class="footer-status-pill">
+                    <span class="status-dot"></span> First-Year College Student
+                </div>
             </div>
 
-            <div class="footer-nav">
-                <h4>Navigation</h4>
-                <ul>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul class="footer-nav-list">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#journey">Journey</a></li>
+                    <li><a href="#shopledger">ShopLedger (Case Study)</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#terminal">Terminal</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -1184,7 +2166,7 @@
     </footer>
 
     <!-- ===== FLOATING BACK TO TOP BUTTON ===== -->
-    <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+    <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Back to top">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <line x1="12" y1="19" x2="12" y2="5"></line>
             <polyline points="5 12 12 5 19 12"></polyline>
@@ -1199,7 +2181,7 @@
                     <span class="preview-badge" id="projectModalCategory">PROJECT DETAILS</span>
                     <h3 id="projectModalTitle">Project <span class="highlight">Overview</span></h3>
                 </div>
-                <button class="modal-close-btn" id="projectModalCloseBtn" aria-label="Close dialog">
+                <button type="button" class="modal-close-btn" id="projectModalCloseBtn" aria-label="Close dialog">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>

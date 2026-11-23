@@ -31,6 +31,159 @@ document.addEventListener("DOMContentLoaded", () => {
     const VERIFIED_FIRST_WEBSITE_URL = "https://mukeshdewasi4524-lab.github.io/my-first-website/";
 
     /* ==========================================================================
+       0. AMBIENT SIGNATURE CANVAS (Midnight Forest, Gold & Sage Constellation)
+       ========================================================================== */
+    const ambientCanvas = document.getElementById("ambientCanvas");
+    if (ambientCanvas) {
+        const ctx = ambientCanvas.getContext("2d");
+        let width = 0;
+        let height = 0;
+        let animationFrameId = null;
+        let particles = [];
+        let mouse = { x: null, y: null, radius: 140 };
+
+        const colors = [
+            "rgba(215, 255, 100, ", // Electric Lime (#D7FF64)
+            "rgba(167, 139, 250, ", // Digital Violet (#A78BFA)
+            "rgba(255, 130, 110, ", // Warm Coral (#FF826E)
+            "rgba(114, 215, 255, ", // Ice Blue (#72D7FF)
+            "rgba(245, 245, 240, "  // Soft White (#F5F5F0)
+        ];
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.radius = Math.random() * 1.8 + 0.8;
+                this.baseColor = colors[Math.floor(Math.random() * colors.length)];
+                this.baseAlpha = Math.random() * 0.45 + 0.2;
+                this.vx = (Math.random() - 0.5) * 0.45;
+                this.vy = (Math.random() - 0.5) * 0.45;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `${this.baseColor}${this.baseAlpha})`;
+                ctx.fill();
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0) this.x = width;
+                else if (this.x > width) this.x = 0;
+
+                if (this.y < 0) this.y = height;
+                else if (this.y > height) this.y = 0;
+
+                if (mouse.x !== null && mouse.y !== null) {
+                    const dx = mouse.x - this.x;
+                    const dy = mouse.y - this.y;
+                    const distance = Math.hypot(dx, dy);
+
+                    if (distance < mouse.radius) {
+                        const forceDirectionX = dx / distance;
+                        const forceDirectionY = dy / distance;
+                        const force = (mouse.radius - distance) / mouse.radius;
+                        const directionX = forceDirectionX * force * 1.2;
+                        const directionY = forceDirectionY * force * 1.2;
+
+                        this.x -= directionX;
+                        this.y -= directionY;
+                    }
+                }
+
+                this.draw();
+            }
+        }
+
+        const initParticles = () => {
+            particles = [];
+            const count = Math.min(Math.floor((width * height) / 22000), 55);
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        };
+
+        const resizeCanvas = () => {
+            width = ambientCanvas.width = window.innerWidth;
+            height = ambientCanvas.height = window.innerHeight;
+            initParticles();
+        };
+
+        const connectParticles = () => {
+            const maxDistance = 115;
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a + 1; b < particles.length; b++) {
+                    const dx = particles[a].x - particles[b].x;
+                    const dy = particles[a].y - particles[b].y;
+                    const distance = Math.hypot(dx, dy);
+
+                    if (distance < maxDistance) {
+                        const opacity = (1 - distance / maxDistance) * 0.12;
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(114, 215, 255, ${opacity * 0.7})`;
+                        ctx.lineWidth = 0.75;
+                        ctx.moveTo(particles[a].x, particles[a].y);
+                        ctx.lineTo(particles[b].x, particles[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        };
+
+        const animate = () => {
+            ctx.clearRect(0, 0, width, height);
+
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+            }
+            connectParticles();
+
+            animationFrameId = requestAnimationFrame(animate);
+        };
+
+        window.addEventListener("resize", () => {
+            resizeCanvas();
+            if (prefersReducedMotion) {
+                ctx.clearRect(0, 0, width, height);
+                particles.forEach(p => p.draw());
+                connectParticles();
+            }
+        }, { passive: true });
+
+        window.addEventListener("mousemove", (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        }, { passive: true });
+
+        window.addEventListener("mouseleave", () => {
+            mouse.x = null;
+            mouse.y = null;
+        }, { passive: true });
+
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) {
+                if (animationFrameId) cancelAnimationFrame(animationFrameId);
+            } else if (!prefersReducedMotion) {
+                animate();
+            }
+        });
+
+        resizeCanvas();
+
+        if (prefersReducedMotion) {
+            ctx.clearRect(0, 0, width, height);
+            particles.forEach(p => p.draw());
+            connectParticles();
+        } else {
+            animate();
+        }
+    }
+
+    /* ==========================================================================
        1. RESPONSIVE NAVBAR & MOBILE MENU DRAWER
        ========================================================================== */
     const navbar = document.getElementById("navbar");
@@ -105,9 +258,9 @@ document.addEventListener("DOMContentLoaded", () => {
        2. HERO SECTION TYPING ANIMATION
        ========================================================================== */
     const typedTextElement = document.getElementById("typedText");
-    const wordsToType = ["Software", "Frontend", "Python", "Interactive", "Creative"];
+    const wordsToType = ["INTERACTIVE", "CREATIVE", "PRACTICAL", "ELEGANT", "SOFTWARE"];
     let wordIndex = 0;
-    // In index.html, "Software" is already pre-rendered
+    // In index.html, "INTERACTIVE" is already pre-rendered
     let charIndex = wordsToType[0].length;
     let isDeleting = true;
     let typingSpeed = 100;
@@ -116,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!typedTextElement) return;
 
         if (prefersReducedMotion) {
-            typedTextElement.textContent = "Software";
+            typedTextElement.textContent = "INTERACTIVE";
             return;
         }
 
@@ -270,6 +423,84 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* ==========================================================================
+       6.5. SHOPLEDGER INTERACTIVE SAAS DASHBOARD TABS & LIVE KHATA INTERACTIONS
+       ========================================================================== */
+    const saasTabButtons = document.querySelectorAll(".saas-tab-btn");
+    const saasPanels = document.querySelectorAll(".saas-panel-content");
+
+    if (saasTabButtons.length > 0 && saasPanels.length > 0) {
+        saasTabButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetTab = btn.getAttribute("data-saas-tab");
+                if (!targetTab) return;
+
+                // Update active state on buttons
+                saasTabButtons.forEach(b => {
+                    b.classList.remove("active");
+                    b.setAttribute("aria-selected", "false");
+                });
+                btn.classList.add("active");
+                btn.setAttribute("aria-selected", "true");
+
+                // Switch visible panel
+                saasPanels.forEach(panel => {
+                    panel.classList.remove("active");
+                });
+                const activePanel = document.getElementById(`saas-panel-${targetTab}`);
+                if (activePanel) {
+                    activePanel.classList.add("active");
+                }
+            });
+        });
+    }
+
+    // Live Khata Ledger Search Filter
+    const khataSearchInput = document.querySelector(".khata-input");
+    const khataRows = document.querySelectorAll(".saas-table tbody tr");
+
+    if (khataSearchInput && khataRows.length > 0) {
+        khataSearchInput.addEventListener("input", () => {
+            const query = khataSearchInput.value.toLowerCase().trim();
+            khataRows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        });
+    }
+
+    // Interactive ShopLedger Demo Action Buttons (+ Udhaar, - Payment, WhatsApp)
+    const microButtons = document.querySelectorAll(".btn-micro");
+    microButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const actionText = btn.textContent.trim();
+            const customerRow = btn.closest("tr");
+            const customerName = customerRow ? (customerRow.querySelector("strong")?.textContent || "Customer") : "Customer";
+            if (actionText.includes("+ Udhaar")) {
+                showToast(`Demo: Opened credit ledger modal for ${customerName}`);
+            } else if (actionText.includes("- Payment")) {
+                showToast(`Demo: Recorded payment entry for ${customerName}`);
+            } else if (actionText.includes("WhatsApp")) {
+                showToast(`Demo: WhatsApp payment reminder generated for ${customerName}`);
+            } else if (actionText.includes("+ New Udhaar")) {
+                showToast(`Demo: Created new ledger account for ${customerName}`);
+            }
+        });
+    });
+
+    // Interactive Stock Requisition Action Chips
+    const saasActionChips = document.querySelectorAll(".saas-action-chip");
+    saasActionChips.forEach(chip => {
+        chip.addEventListener("click", () => {
+            const chipName = chip.textContent.trim();
+            showToast(`Inventory Alert: ${chipName} requisition drafted for supplier`);
+        });
+    });
+
+    /* ==========================================================================
        7. INTERACTIVE DEVELOPER TERMINAL (CLI Engine)
        ========================================================================== */
     const terminalInput = document.getElementById("terminalInput");
@@ -293,6 +524,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             <td>Display this list of available commands</td>
                         </tr>
                         <tr>
+                            <td class="term-cmd-col">whoami</td>
+                            <td>Display active session & developer identity</td>
+                        </tr>
+                        <tr>
                             <td class="term-cmd-col">about</td>
                             <td>Learn about Mukesh Dewasi & education status</td>
                         </tr>
@@ -303,6 +538,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         <tr>
                             <td class="term-cmd-col">projects</td>
                             <td>View featured projects & live web apps</td>
+                        </tr>
+                        <tr>
+                            <td class="term-cmd-col">shopledger</td>
+                            <td>Explore the flagship ShopLedger SaaS case study & modules</td>
                         </tr>
                         <tr>
                             <td class="term-cmd-col">github</td>
@@ -323,6 +562,28 @@ document.addEventListener("DOMContentLoaded", () => {
                     </tbody>
                 </table>
             `;
+        },
+
+        whoami: () => {
+            return `
+                <p><span class="term-accent">User:</span> guest@mukesh.dev (Visitor Session)</p>
+                <p><span class="term-accent">Developer:</span> Mukesh Dewasi</p>
+                <p><span class="term-accent">Role:</span> Student Developer (First-Year College Student)</p>
+                <p><span class="term-accent">Flagship:</span> ShopLedger (Digital Retail Khata & Inventory SaaS)</p>
+                <p><span class="term-accent">Tech Stack:</span> Python, HTML5, CSS3, JavaScript (ES6+), Git & GitHub</p>
+            `;
+        },
+
+        date: () => {
+            return `<p class="term-accent">System Time: <span class="term-dim">${new Date().toLocaleString()}</span></p>`;
+        },
+
+        repo: () => {
+            return `<p>GitHub Profile: <a href="${VERIFIED_GITHUB_URL}" target="_blank" rel="noopener noreferrer" class="term-link">${VERIFIED_GITHUB_URL} ↗</a></p>`;
+        },
+
+        sudo: () => {
+            return `<p class="term-warn">bash: sudo: permission denied. Guest users operate in restricted sandbox mode on mukesh.dev ;)</p>`;
         },
 
         about: () => {
@@ -348,14 +609,27 @@ document.addEventListener("DOMContentLoaded", () => {
         projects: () => {
             return `
                 <p class="term-accent">Featured Projects:</p>
-                <p>1. <span class="term-accent">ShopLedger</span> (Web Application / In Progress)</p>
-                <p>   Smarter shop management & accounting concept for local retail inventory & customer khata records.</p>
+                <p>1. <span class="term-accent">ShopLedger</span> (★ Flagship SaaS Case Study / In Progress)</p>
+                <p>   Smarter shop management & digital Khata accounting concept for local retail stores.</p>
+                <p>   Type <span class="term-accent">'shopledger'</span> or scroll to <a href="#shopledger" class="term-link">#shopledger</a> to view the case study.</p>
                 <p>2. <span class="term-accent">My First Website</span> (Frontend / Live)</p>
                 <p>   Personal developer portfolio milestone built with pure HTML, CSS, and JavaScript.</p>
                 <p>   URL: <a href="${VERIFIED_FIRST_WEBSITE_URL}" target="_blank" rel="noopener noreferrer" class="term-link">${VERIFIED_FIRST_WEBSITE_URL} ↗</a></p>
                 <p>3. <span class="term-accent">Personal Developer Portfolio</span> (Production Web)</p>
                 <p>   High-performance developer portfolio with interactive CLI, live GitHub integration & ATS resume.</p>
                 <p>   Source: <a href="${VERIFIED_GITHUB_URL}" target="_blank" rel="noopener noreferrer" class="term-link">${VERIFIED_GITHUB_URL} ↗</a></p>
+            `;
+        },
+
+        shopledger: () => {
+            return `
+                <p class="term-accent">★ ShopLedger — Flagship SaaS Project & Case Study:</p>
+                <p>• <span class="term-accent">Mission:</span> Smarter Shop Operations & Digital Khata (Udhaar) Management for Local Retailers</p>
+                <p>• <span class="term-accent">Target Users:</span> Neighborhood grocery stores, Kirana shops, and independent small business owners</p>
+                <p>• <span class="term-accent">Core Modules:</span> Overview Dashboard, Customer Khata Ledger, Stock Alerts, Gemini AI Insights</p>
+                <p>• <span class="term-accent">Verified Tech Stack:</span> React 19, Vite, JavaScript (ES6+), Modern CSS, localStorage</p>
+                <p>• <span class="term-accent">Status:</span> Active Development (Concept & Core Ledger UI Ready)</p>
+                <p>• <span class="term-accent">Interactive Demo & Case Study:</span> Scroll to <a href="#shopledger" class="term-link">#shopledger</a> to explore the interactive SaaS dashboard!</p>
             `;
         },
 
@@ -521,6 +795,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* ==========================================================================
+       7.5. SKILLS CATEGORY FILTER
+       ========================================================================== */
+    const skillFilterBtns = document.querySelectorAll(".skill-filter-btn");
+    const skillCategoryWrappers = document.querySelectorAll(".skills-category-wrapper");
+
+    if (skillFilterBtns.length > 0 && skillCategoryWrappers.length > 0) {
+        skillFilterBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetFilter = btn.getAttribute("data-skill-filter");
+
+                skillFilterBtns.forEach(b => {
+                    b.classList.remove("active");
+                    b.setAttribute("aria-selected", "false");
+                });
+
+                btn.classList.add("active");
+                btn.setAttribute("aria-selected", "true");
+
+                skillCategoryWrappers.forEach(wrapper => {
+                    const category = wrapper.getAttribute("data-category");
+                    if (targetFilter === "all" || category === targetFilter) {
+                        wrapper.style.display = "";
+                        wrapper.classList.remove("is-hidden");
+                    } else {
+                        wrapper.style.display = "none";
+                        wrapper.classList.add("is-hidden");
+                    }
+                });
+            });
+        });
+    }
+
+    /* ==========================================================================
        8. ADVANCED PROJECT SHOWCASE (Filters & Shared Details Modal)
        ========================================================================== */
     const filterButtons = document.querySelectorAll(".filter-btn");
@@ -620,12 +927,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `,
             footerHtml: `
-                <a href="${VERIFIED_GITHUB_URL}" target="_blank" rel="noopener noreferrer" class="btn primary-btn">
-                    <span>View on GitHub</span>
-                    <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                        <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
+                <a href="#shopledger" class="btn primary-btn" onclick="closeProjectModal()">
+                    <span>Full Flagship Case Study ↗</span>
+                </a>
+                <a href="${VERIFIED_GITHUB_URL}" target="_blank" rel="noopener noreferrer" class="btn secondary-btn">
+                    <span>GitHub Profile</span>
                 </a>
             `
         },
